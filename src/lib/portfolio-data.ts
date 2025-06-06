@@ -21,6 +21,14 @@ export interface EducationItem {
   details?: string[];
 }
 
+export interface ExperienceItem {
+  company: string;
+  role: string;
+  dates: string;
+  description: string[];
+  location?: string;
+}
+
 export interface ContactInfo {
   email: string;
   phone: string;
@@ -36,6 +44,7 @@ export interface PortfolioData {
   aboutMe: string[];
   skills: SkillCategory[];
   projects: Project[];
+  experience: ExperienceItem[];
   education: EducationItem[];
 }
 
@@ -99,6 +108,19 @@ export const portfolioData: PortfolioData = {
       githubLink: "https://github.com/sriram020204",
     }
   ],
+  experience: [
+    {
+      company: "Quadric IT",
+      role: "AI/ML Intern",
+      dates: "June 2024 – Present",
+      description: [
+        "Actively contributing to diverse AI and Machine Learning projects.",
+        "Gaining hands-on experience in developing, implementing, and deploying ML models.",
+        "Collaborating with a team to explore innovative AI solutions."
+      ],
+      location: "Hyderabad, Telangana (Remote)"
+    }
+  ],
   education: [
     {
       institution: "Atal Bihari Vajpayee Indian Institute of Information Technology and Management",
@@ -108,4 +130,3 @@ export const portfolioData: PortfolioData = {
     }
   ]
 };
-

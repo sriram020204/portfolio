@@ -5,7 +5,7 @@ import Link from "next/link";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Menu, Briefcase, User, Lightbulb, School, Mail } from "lucide-react";
+import { Menu, Briefcase, User, Lightbulb, School, Mail, Building2 } from "lucide-react";
 import { portfolioData } from "@/lib/portfolio-data";
 import React, { useState, useEffect } from "react";
 
@@ -13,6 +13,7 @@ const navItems = [
   { href: "#about", label: "About", icon: User },
   { href: "#skills", label: "Skills", icon: Lightbulb },
   { href: "#projects", label: "Projects", icon: Briefcase },
+  { href: "#experience", label: "Experience", icon: Building2 },
   { href: "#education", label: "Education", icon: School },
   { href: "#contact", label: "Contact", icon: Mail },
 ];
@@ -59,16 +60,14 @@ export function Header() {
           <Link href="/" className="text-2xl font-bold font-headline text-primary">
             {portfolioData.name.split(" ")[0]} <span className="text-foreground/80">{portfolioData.name.split(" ").slice(1).join(" ")}</span>
           </Link>
-          {/* Desktop Nav Placeholder */}
           <div className="hidden md:flex items-center space-x-2">
             {navItems.map((item) => (
               <div key={item.label} className="h-9 w-20 rounded-md bg-muted/30 animate-pulse" />
             ))}
-            <div className="h-10 w-10 rounded-full bg-muted/30 animate-pulse" /> {/* ThemeToggle placeholder */}
+            <div className="h-10 w-10 rounded-full bg-muted/30 animate-pulse" />
           </div>
-          {/* Mobile Nav Trigger Placeholder */}
           <div className="md:hidden">
-            <div className="h-10 w-10 rounded-md bg-muted/30 animate-pulse" /> {/* Menu icon placeholder */}
+            <div className="h-10 w-10 rounded-md bg-muted/30 animate-pulse" />
           </div>
         </div>
       </header>
