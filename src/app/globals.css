@@ -9,94 +9,94 @@ html {
 
 @layer base {
   :root {
-    --background: 40 100% 97%; /* Light Creamy Peach */
-    --foreground: 200 95% 25%; /* Deep Cerulean Blue */
+    --background: 210 60% 98%; /* Very Light Cool Grey/Blue */
+    --foreground: 220 40% 25%; /* Dark Slate Blue */
     
     --card: 0 0% 100%; /* White */
-    --card-foreground: 200 95% 25%; /* Deep Cerulean Blue */
+    --card-foreground: 220 40% 25%; /* Dark Slate Blue */
     
     --popover: 0 0% 100%; /* White */
-    --popover-foreground: 200 95% 25%; /* Deep Cerulean Blue */
+    --popover-foreground: 220 40% 25%; /* Dark Slate Blue */
     
-    --primary: 340 85% 55%; /* Vibrant Pink/Magenta */
+    --primary: 210 85% 55%; /* Vibrant Blue */
     --primary-foreground: 0 0% 100%; /* White */
     
-    --secondary: 180 70% 85%; /* Light Aqua/Cyan */
-    --secondary-foreground: 180 90% 20%; /* Dark Cyan */
+    --secondary: 145 65% 45%; /* Pleasant Green */
+    --secondary-foreground: 0 0% 100%; /* White */
     
-    --muted: 40 50% 90%; /* Lighter Peachy Muted */
-    --muted-foreground: 200 70% 45%; /* Softer Cerulean Blue */
+    --muted: 210 40% 92%; /* Light Muted Blue */
+    --muted-foreground: 210 30% 45%; /* Medium Muted Blue */
     
-    --accent: 50 100% 60%; /* Bright Sunny Yellow/Orange */
-    --accent-foreground: 30 90% 25%; /* Dark Orange/Brown */
+    --accent: 50 100% 60%; /* Bright Yellow */
+    --accent-foreground: 40 80% 15%; /* Dark Brown for text on Yellow */
     
-    --destructive: 0 84.2% 60.2%; /* Default Destructive Red */
-    --destructive-foreground: 0 0% 98%; /* Default Destructive FG */
+    --destructive: 0 75% 55%; /* Vibrant Red */
+    --destructive-foreground: 0 0% 100%; /* White */
     
-    --border: 40 50% 85%; /* Lighter Peachy Border */
-    --input: 40 50% 85%; /* Lighter Peachy Input */
-    --ring: 340 85% 55%; /* Vibrant Pink/Magenta */
+    --border: 210 30% 85%; /* Light Blue-Grey Border */
+    --input: 210 30% 85%; /* Light Blue-Grey Input */
+    --ring: 210 85% 55%; /* Vibrant Blue */
     
-    --chart-1: 12 80% 60%;   /* Fiery Red-Orange */
-    --chart-2: 170 70% 45%;  /* Bright Teal */
-    --chart-3: 210 80% 55%;  /* Bright Blue */
-    --chart-4: 50 100% 55%;  /* Sunny Yellow */
-    --chart-5: 280 80% 60%;  /* Bright Purple */
+    --chart-1: 0 80% 60%;   /* Red */
+    --chart-2: 210 70% 50%;  /* Blue */
+    --chart-3: 130 60% 45%;  /* Green */
+    --chart-4: 50 95% 55%;  /* Yellow */
+    --chart-5: 30 100% 55%;  /* Orange (complementary vibrant) */
     --radius: 0.5rem;
 
-    --sidebar-background: 40 100% 98%; /* Very Light Creamy Peach */
-    --sidebar-foreground: 200 80% 20%; /* Dark Cerulean */
-    --sidebar-primary: 340 80% 50%;    /* Slightly less intense Pink/Magenta */
+    --sidebar-background: 210 50% 96%; /* Lighter version of background */
+    --sidebar-foreground: 220 40% 30%; /* Slightly lighter foreground */
+    --sidebar-primary: 210 80% 50%;    /* Primary for sidebar */
     --sidebar-primary-foreground: 0 0% 100%; /* White */
-    --sidebar-accent: 180 60% 90%;     /* Lighter Aqua */
-    --sidebar-accent-foreground: 180 80% 15%; /* Darker Aqua */
-    --sidebar-border: 40 50% 90%;      /* Very Light Peachy Border */
-    --sidebar-ring: 340 85% 55%;       /* Vibrant Pink/Magenta */
+    --sidebar-accent: 145 60% 88%;     /* Light Green Accent for sidebar */
+    --sidebar-accent-foreground: 145 70% 20%; /* Dark Green for text on sidebar accent */
+    --sidebar-border: 210 30% 88%;      /* Lighter Border for sidebar */
+    --sidebar-ring: 210 85% 55%;       /* Vibrant Blue */
   }
  
   .dark {
-    --background: 220 30% 10%; /* Very Dark Blue/Indigo */
-    --foreground: 40 100% 90%; /* Pale Yellow/Cream */
+    --background: 220 25% 12%; /* Dark Cool Grey/Blue */
+    --foreground: 210 30% 90%; /* Light Cool Grey */
     
-    --card: 220 30% 15%; /* Darker Blue/Indigo */
-    --card-foreground: 40 100% 90%; /* Pale Yellow/Cream */
+    --card: 220 25% 18%; /* Slightly Lighter Dark Cool Grey/Blue */
+    --card-foreground: 210 30% 90%; /* Light Cool Grey */
     
-    --popover: 220 30% 10%; /* Very Dark Blue/Indigo */
-    --popover-foreground: 40 100% 90%; /* Pale Yellow/Cream */
+    --popover: 220 25% 12%; /* Dark Cool Grey/Blue */
+    --popover-foreground: 210 30% 90%; /* Light Cool Grey */
     
-    --primary: 170 100% 50%; /* Bright Cyan/Turquoise */
-    --primary-foreground: 220 30% 5%; /* Very Dark Blue */
+    --primary: 210 100% 65%; /* Bright Electric Blue */
+    --primary-foreground: 220 30% 10%; /* Very Dark Blue for text on primary */
     
-    --secondary: 330 90% 60%; /* Vibrant Pink */
-    --secondary-foreground: 40 100% 90%; /* Pale Yellow/Cream */
+    --secondary: 145 70% 55%; /* Bright Green */
+    --secondary-foreground: 145 80% 10%; /* Very Dark Green for text on secondary */
     
-    --muted: 220 30% 20%; /* Darker Muted Blue */
-    --muted-foreground: 40 80% 75%; /* Softer Pale Yellow */
+    --muted: 220 25% 25%; /* Darker Muted Blue/Grey */
+    --muted-foreground: 210 30% 75%; /* Lighter Muted Grey */
     
-    --accent: 50 100% 65%; /* Bright Gold/Orange */
-    --accent-foreground: 220 30% 95%; /* Very Light Blue/White */
+    --accent: 50 100% 70%; /* Bright Yellow */
+    --accent-foreground: 50 80% 10%; /* Very Dark Yellow/Brown for text on accent */
     
-    --destructive: 0 72.2% 50.6%; /* Default Destructive Red */
-    --destructive-foreground: 0 0% 98%; /* Default Destructive FG */
+    --destructive: 0 80% 65%; /* Brighter Red */
+    --destructive-foreground: 0 0% 100%; /* White */
     
-    --border: 220 30% 25%; /* Slightly Lighter Dark Blue Border */
-    --input: 220 30% 25%; /* Slightly Lighter Dark Blue Input */
-    --ring: 170 100% 50%; /* Bright Cyan/Turquoise */
+    --border: 220 25% 30%; /* Medium Dark Blue/Grey Border */
+    --input: 220 25% 30%; /* Medium Dark Blue/Grey Input */
+    --ring: 210 100% 65%; /* Bright Electric Blue */
 
-    --chart-1: 120 100% 50%; /* Neon Green */
-    --chart-2: 330 100% 65%; /* Bright Pink */
-    --chart-3: 200 100% 60%; /* Electric Blue */
-    --chart-4: 55 100% 55%;  /* Vibrant Yellow */
-    --chart-5: 25 100% 60%;   /* Bright Orange */
+    --chart-1: 0 90% 70%;   /* Bright Red */
+    --chart-2: 210 90% 60%;  /* Bright Blue */
+    --chart-3: 130 80% 55%;  /* Bright Green */
+    --chart-4: 50 100% 65%;  /* Bright Yellow */
+    --chart-5: 30 100% 65%;   /* Bright Orange */
 
-    --sidebar-background: 220 30% 8%;  /* Even Darker Blue/Indigo */
-    --sidebar-foreground: 40 100% 85%; /* Slightly Dimmer Pale Yellow/Cream */
-    --sidebar-primary: 170 90% 45%;    /* Slightly less intense Bright Cyan */
-    --sidebar-primary-foreground: 220 30% 5%; /* Very Dark Blue */
-    --sidebar-accent: 330 80% 55%;     /* Slightly less intense Vibrant Pink */
-    --sidebar-accent-foreground: 40 100% 90%; /* Pale Yellow/Cream */
-    --sidebar-border: 220 30% 20%;      /* Dark Blue Border */
-    --sidebar-ring: 170 100% 50%;       /* Bright Cyan/Turquoise */
+    --sidebar-background: 220 25% 10%;  /* Darker version of background for sidebar */
+    --sidebar-foreground: 210 30% 85%; /* Slightly dimmer foreground for sidebar */
+    --sidebar-primary: 210 95% 60%;    /* Slightly less intense Bright Blue */
+    --sidebar-primary-foreground: 220 30% 8%; /* Very Dark Blue */
+    --sidebar-accent: 145 65% 50%;     /* Medium Dark Green Accent */
+    --sidebar-accent-foreground: 145 70% 90%; /* Light Green for text on sidebar accent */
+    --sidebar-border: 220 25% 25%;      /* Darker Border for sidebar */
+    --sidebar-ring: 210 100% 65%;       /* Bright Electric Blue */
   }
 }
  
