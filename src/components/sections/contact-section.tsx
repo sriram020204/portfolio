@@ -42,7 +42,7 @@ export function ContactSection() {
           </p>
         </div>
 
-        <div className="max-w-lg mx-auto">
+        <div className="max-w-2xl mx-auto">
           <Card
             className="shadow-lg transition-all duration-300 ease-in-out hover:shadow-xl hover:scale-[1.07] hover:-translate-y-1 animate-fade-in-up"
             style={{ opacity: 0, animationDelay: '300ms' }}
