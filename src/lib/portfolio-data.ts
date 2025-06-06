@@ -1,3 +1,4 @@
+
 export interface Project {
   id: string;
   title: string;
@@ -44,7 +45,7 @@ export const portfolioData: PortfolioData = {
   contact: {
     email: "sriramginjala60@gmail.com",
     phone: "+91 8790567522",
-    linkedin: "https://www.linkedin.com/in/sri-ram-kumar-reddy-ginjala-placeholder", // Replace with actual LinkedIn URL
+    linkedin: "https://www.linkedin.com/in/sriram-kumar-reddy-ginjala/",
     github: "https://github.com/sriram020204",
   },
   heroTagline: "Passionate about machine learning and dedicated to advancing technology through impactful projects.",
@@ -57,7 +58,7 @@ export const portfolioData: PortfolioData = {
     { category: "Machine Learning", skills: ["Deep Learning", "Neural Networks", "Image Processing", "Natural Language Processing (NLP)"] },
     { category: "Data Science & Analytics", skills: ["Data Pre-processing", "Feature Engineering", "Exploratory Data Analysis (EDA)", "Statistical Analysis", "Predictive Modeling"] },
     { category: "Developer Tools", skills: ["Git", "GitHub"] },
-    { category: "Libraries & Frameworks", skills: ["Pandas", "NumPy", "Scikit-Learn", "TensorFlow", "Keras", "NLTK", "Matplotlib", "Seaborn", "imbalanced-learn"] }
+    { category: "Libraries & Frameworks", skills: ["Pandas", "NumPy", "Scikit-Learn", "TensorFlow", "Keras", "NLTK", "Matplotlib", "Seaborn", "imbalanced-learn", "PyTorch"] }
   ],
   projects: [
     {
@@ -95,7 +96,7 @@ export const portfolioData: PortfolioData = {
         "Achieved high accuracy and recall with balanced dataset."
       ],
       techStack: ["Python", "Scikit-Learn", "NLTK", "Pandas", "Matplotlib", "imbalanced-learn"],
-      githubLink: "https://github.com/sriram020204", 
+      githubLink: "https://github.com/sriram020204",
     }
   ],
   education: [
@@ -103,7 +104,7 @@ export const portfolioData: PortfolioData = {
       institution: "Atal Bihari Vajpayee Indian Institute of Information Technology and Management",
       degree: "BS in Computer Science",
       dates: "Nov. 2022 – June 2026",
-      gpa: "7.59/10",
+      gpa: "7.70/10",
     }
   ]
 };
