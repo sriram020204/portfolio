@@ -75,10 +75,12 @@ export function ProjectsSection() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
            <h2
-            className="font-headline text-4xl font-bold text-primary sm:text-5xl animate-fade-in-up"
+            className="font-headline text-4xl font-bold sm:text-5xl animate-fade-in-up"
             style={{ opacity: 0, animationDelay: '100ms' }}
            >
-            Projects
+            <span className="bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent animate-text-gradient-flow bg-[size:200%_auto]">
+              Projects
+            </span>
           </h2>
           <p
             className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto animate-fade-in-up"

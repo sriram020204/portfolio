@@ -8,13 +8,15 @@ export function AboutSection() {
     <section id="about" className="py-16 sm:py-24 bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 
-            className="font-headline text-4xl font-bold text-primary sm:text-5xl animate-fade-in-up"
+          <h2
+            className="font-headline text-4xl font-bold sm:text-5xl animate-fade-in-up"
             style={{ opacity: 0, animationDelay: '100ms' }}
           >
-            About Me
+            <span className="bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent animate-text-gradient-flow bg-[size:200%_auto]">
+              About Me
+            </span>
           </h2>
-          <p 
+          <p
             className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto animate-fade-in-up"
             style={{ opacity: 0, animationDelay: '200ms' }}
           >
@@ -22,28 +24,25 @@ export function AboutSection() {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
-          <div 
-            className="md:col-span-3 animate-fade-in-up"
-            style={{ opacity: 0, animationDelay: '300ms' }}
-          >
-            <Card className="shadow-lg transition-all duration-300 ease-in-out hover:shadow-xl hover:scale-[1.07] hover:-translate-y-1">
-              <CardHeader>
-                <CardTitle className="flex items-center text-2xl font-semibold text-primary">
-                  <UserCircle className="mr-3 h-8 w-8" />
-                  {portfolioData.name}
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-4 text-base text-foreground/90 leading-relaxed">
-                {portfolioData.aboutMe.map((paragraph, index) => (
-                  <p key={index}>{paragraph}</p>
-                ))}
-              </CardContent>
-            </Card>
-          </div>
+        <div
+          className="animate-fade-in-up"
+          style={{ opacity: 0, animationDelay: '300ms' }}
+        >
+          <Card className="shadow-lg transition-all duration-300 ease-in-out hover:shadow-xl hover:scale-[1.07] hover:-translate-y-1">
+            <CardHeader>
+              <CardTitle className="flex items-center text-2xl font-semibold text-primary">
+                <UserCircle className="mr-3 h-8 w-8" />
+                {portfolioData.name}
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-4 text-base text-foreground/90 leading-relaxed">
+              {portfolioData.aboutMe.map((paragraph, index) => (
+                <p key={index}>{paragraph}</p>
+              ))}
+            </CardContent>
+          </Card>
         </div>
       </div>
     </section>
   );
 }
-

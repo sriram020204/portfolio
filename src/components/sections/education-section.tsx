@@ -8,13 +8,15 @@ export function EducationSection() {
     <section id="education" className="py-16 sm:py-24 bg-secondary/30">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 
-            className="font-headline text-4xl font-bold text-primary sm:text-5xl animate-fade-in-up"
+          <h2
+            className="font-headline text-4xl font-bold sm:text-5xl animate-fade-in-up"
             style={{ opacity: 0, animationDelay: '100ms' }}
           >
-            Education
+            <span className="bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent animate-text-gradient-flow bg-[size:200%_auto]">
+              Education
+            </span>
           </h2>
-          <p 
+          <p
             className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto animate-fade-in-up"
             style={{ opacity: 0, animationDelay: '200ms' }}
           >
@@ -25,12 +27,12 @@ export function EducationSection() {
         <div className="space-y-8">
           {portfolioData.education.map((edu, index) => (
             <div
-              key={edu.institution + '-' + index} 
+              key={edu.institution + '-' + index}
               className="animate-fade-in-up"
               style={{ opacity: 0, animationDelay: `${300 + index * 100}ms` }}
             >
               <Card 
-                className="shadow-lg transition-all duration-300 ease-in-out hover:shadow-xl hover:scale-[1.07] hover:-translate-y-1"
+                className="shadow-lg transition-all duration-300 ease-in-out hover:shadow-xl hover:scale-[1.07] hover:-translate-y-1 max-w-3xl mx-auto"
               >
                 <CardHeader>
                   <CardTitle className="text-xl font-semibold font-headline text-primary">{edu.institution}</CardTitle>
