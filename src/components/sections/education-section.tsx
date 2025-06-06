@@ -22,11 +22,11 @@ export function EducationSection() {
           </p>
         </div>
         
-        <div className="max-w-2xl mx-auto">
+        <div>
           {portfolioData.education.map((edu, index) => (
             <Card 
               key={index} 
-              className="shadow-lg mb-6 transition-all duration-300 ease-in-out hover:shadow-xl hover:scale-[1.07] hover:-translate-y-1 animate-fade-in-up"
+              className="shadow-lg mb-6 transition-all duration-300 ease-in-out hover:shadow-xl hover:scale-[1.07] hover:-translate-y-1 animate-fade-in-up max-w-3xl mx-auto"
               style={{ opacity: 0, animationDelay: `${400 + index * 100}ms` }}
             >
               <CardHeader>
