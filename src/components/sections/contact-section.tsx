@@ -3,6 +3,7 @@
 
 import { portfolioData } from "@/lib/portfolio-data";
 import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Github, Linkedin, Mail, Phone } from "lucide-react";
 import Link from "next/link";
 
@@ -25,13 +26,18 @@ export function ContactSection() {
           </p>
         </div>
 
-        <div className="max-w-lg mx-auto">
-          <div
-            className="animate-fade-in-up"
+        <div className="max-w-md mx-auto">
+          <Card 
+            className="shadow-lg transition-all duration-300 ease-in-out hover:shadow-xl hover:scale-[1.07] hover:-translate-y-1 animate-fade-in-up"
             style={{ opacity: 0, animationDelay: '300ms' }}
           >
-            <h3 className="text-2xl font-semibold mb-6 text-primary text-center md:text-left">Contact Information</h3>
-            <div className="space-y-4">
+            <CardHeader>
+              <CardTitle className="flex items-center text-2xl font-semibold text-primary">
+                <Mail className="mr-3 h-8 w-8" />
+                Contact Information
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-4">
               <Link href={`mailto:${portfolioData.contact.email}`} className="flex items-center group">
                 <Mail className="mr-3 h-6 w-6 text-primary/80 group-hover:text-primary transition-colors" />
                 <span className="text-base text-foreground/90 group-hover:text-primary transition-colors">{portfolioData.contact.email}</span>
@@ -48,8 +54,8 @@ export function ContactSection() {
                 <Github className="mr-3 h-6 w-6 text-primary/80 group-hover:text-primary transition-colors" />
                 <span className="text-base text-foreground/90 group-hover:text-primary transition-colors">GitHub Profile</span>
               </Link>
-            </div>
-          </div>
+            </CardContent>
+          </Card>
         </div>
       </div>
     </section>
