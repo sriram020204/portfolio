@@ -7,7 +7,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
-import { Github, ExternalLink, Briefcase, Sparkles } from "lucide-react";
+import { Github, ExternalLink, Sparkles } from "lucide-react";
 import React, { useState } from "react";
 import { explainProject, type ExplainProjectInput, type ExplainProjectOutput } from "@/ai/flows/explain-project-flow";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
@@ -26,7 +26,7 @@ function ProjectCard({ project, index }: ProjectCardProps) {
   const handleExplainProject = async () => {
     setIsAiExplanationLoading(true);
     setAiError(null);
-    setAiExplanation(null); // Clear previous explanation
+    setAiExplanation(null); 
 
     try {
       const input: ExplainProjectInput = {
@@ -46,7 +46,7 @@ function ProjectCard({ project, index }: ProjectCardProps) {
   return (
     <Card 
       className="flex flex-col overflow-hidden shadow-lg transition-all duration-300 ease-in-out hover:shadow-xl hover:scale-[1.03] hover:-translate-y-1 animate-fade-in-up"
-      style={{ opacity: 0, animationDelay: `${200 + index * 100}ms` }}
+      style={{ opacity: 0, animationDelay: `${300 + index * 100}ms` }}
     >
       <CardHeader className="pb-4">
         <CardTitle className="text-xl font-semibold font-headline text-primary">{project.title}</CardTitle>
@@ -134,10 +134,9 @@ export function ProjectsSection() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
            <h2 
-            className="font-headline text-4xl font-bold text-primary sm:text-5xl flex items-center justify-center animate-fade-in-up"
+            className="font-headline text-4xl font-bold text-primary sm:text-5xl animate-fade-in-up"
             style={{ opacity: 0, animationDelay: '100ms' }}
            >
-            <Briefcase className="mr-3 h-10 w-10" />
             Projects
           </h2>
           <p 

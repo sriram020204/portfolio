@@ -1,7 +1,7 @@
 
 import { portfolioData } from "@/lib/portfolio-data";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-import { Building2, CalendarDays, MapPin } from "lucide-react";
+import { CalendarDays, MapPin } from "lucide-react";
 
 export function ExperienceSection() {
   if (!portfolioData.experience || portfolioData.experience.length === 0) {
@@ -13,10 +13,9 @@ export function ExperienceSection() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 
-            className="font-headline text-4xl font-bold text-primary sm:text-5xl flex items-center justify-center animate-fade-in-up"
+            className="font-headline text-4xl font-bold text-primary sm:text-5xl animate-fade-in-up"
             style={{ opacity: 0, animationDelay: '100ms' }}
           >
-            <Building2 className="mr-3 h-10 w-10" />
             Work Experience
           </h2>
           <p 
@@ -32,7 +31,7 @@ export function ExperienceSection() {
             <Card 
               key={index} 
               className="shadow-lg transition-all duration-300 ease-in-out hover:shadow-xl hover:scale-[1.03] hover:-translate-y-1 animate-fade-in-up"
-              style={{ opacity: 0, animationDelay: `${200 + index * 100}ms` }}
+              style={{ opacity: 0, animationDelay: `${300 + index * 100}ms` }}
             >
               <CardHeader>
                 <CardTitle className="text-xl font-semibold font-headline text-primary">{exp.role}</CardTitle>
