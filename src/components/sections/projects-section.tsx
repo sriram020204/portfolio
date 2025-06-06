@@ -20,14 +20,14 @@ function ProjectCard({ project, index }: ProjectCardProps) {
   return (
     <Card
       className="flex flex-col overflow-hidden shadow-lg transition-all duration-300 ease-in-out hover:shadow-xl hover:scale-[1.07] hover:-translate-y-1 animate-fade-in-up"
-      style={{ opacity: 0, animationDelay: `${300 + index * 100}ms` }}
+      style={{ opacity: 0, animationDelay: `${400 + index * 100}ms` }}
     >
       <CardHeader className="pb-4">
         <CardTitle className="text-xl font-semibold font-headline text-primary">{project.title}</CardTitle>
       </CardHeader>
       <CardContent className="flex-grow space-y-3">
         {project.description.map((desc, idx) => (
-          <p key={idx} className="text-sm text-foreground/80 leading-relaxed">
+          <p key={idx} className="text-base text-foreground/90 leading-relaxed">
             {desc}
           </p>
         ))}
