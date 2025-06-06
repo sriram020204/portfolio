@@ -1,3 +1,4 @@
+
 "use client";
 
 import { portfolioData } from "@/lib/portfolio-data";
@@ -8,7 +9,7 @@ import { Label } from "@/components/ui/label";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Github, Linkedin, Mail, Phone, Send } from "lucide-react";
 import Link from "next/link";
-import { useActionState, useEffect } from "react"; // Changed from react-dom's useFormState
+import { useActionState, useEffect } from "react";
 import { useFormStatus } from "react-dom";
 import { submitContactForm, type ContactFormState } from "@/app/actions/contact";
 import { useToast } from "@/hooks/use-toast";
@@ -29,7 +30,7 @@ function SubmitButton() {
 }
 
 export function ContactSection() {
-  const [state, formAction] = useActionState(submitContactForm, initialState); // Changed to useActionState
+  const [state, formAction] = useActionState(submitContactForm, initialState);
   const { toast } = useToast();
 
   useEffect(() => {
@@ -38,8 +39,7 @@ export function ContactSection() {
         title: "Message Sent!",
         description: state.message,
       });
-      // Optionally reset form fields here if not handled by useActionState behavior
-    } else if (state.status === "error" && state.message && !state.errors) { // General error message
+    } else if (state.status === "error" && state.message && !state.errors) { 
       toast({
         title: "Error",
         description: state.message,
@@ -53,16 +53,25 @@ export function ContactSection() {
     <section id="contact" className="py-16 sm:py-24 bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="font-headline text-4xl font-bold text-primary sm:text-5xl">
+          <h2 
+            className="font-headline text-4xl font-bold text-primary sm:text-5xl animate-fade-in-up"
+            style={{ opacity: 0, animationDelay: '100ms' }}
+          >
             Get In Touch
           </h2>
-          <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p 
+            className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto animate-fade-in-up"
+            style={{ opacity: 0, animationDelay: '200ms' }}
+          >
             Feel free to reach out for collaborations, opportunities, or just a chat.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-          <div>
+          <div 
+            className="animate-fade-in-up"
+            style={{ opacity: 0, animationDelay: '300ms' }}
+          >
             <h3 className="text-2xl font-semibold mb-6 text-primary">Contact Information</h3>
             <div className="space-y-4">
               <Link href={`mailto:${portfolioData.contact.email}`} className="flex items-center group">
@@ -84,7 +93,10 @@ export function ContactSection() {
             </div>
           </div>
 
-          <Card className="shadow-lg">
+          <Card 
+            className="shadow-lg transition-all duration-300 ease-in-out hover:shadow-xl animate-fade-in-up"
+            style={{ opacity: 0, animationDelay: '400ms' }}
+          >
             <CardHeader>
               <CardTitle className="text-2xl font-semibold text-primary">Send me a message</CardTitle>
             </CardHeader>

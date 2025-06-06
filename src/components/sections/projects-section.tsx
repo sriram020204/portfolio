@@ -1,3 +1,4 @@
+
 import { portfolioData } from "@/lib/portfolio-data";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -10,24 +11,34 @@ export function ProjectsSection() {
     <section id="projects" className="py-16 sm:py-24 bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-           <h2 className="font-headline text-4xl font-bold text-primary sm:text-5xl flex items-center justify-center">
+           <h2 
+            className="font-headline text-4xl font-bold text-primary sm:text-5xl flex items-center justify-center animate-fade-in-up"
+            style={{ opacity: 0, animationDelay: '100ms' }}
+           >
             <Briefcase className="mr-3 h-10 w-10" />
             Projects
           </h2>
-          <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p 
+            className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto animate-fade-in-up"
+            style={{ opacity: 0, animationDelay: '200ms' }}
+          >
             Showcasing some of the key projects I've worked on.
           </p>
         </div>
         
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {portfolioData.projects.map((project) => (
-            <Card key={project.id} className="flex flex-col overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+          {portfolioData.projects.map((project, index) => (
+            <Card 
+              key={project.id} 
+              className="flex flex-col overflow-hidden shadow-lg transition-all duration-300 ease-in-out hover:shadow-xl hover:scale-[1.03] hover:-translate-y-1 animate-fade-in-up"
+              style={{ opacity: 0, animationDelay: `${200 + index * 100}ms` }}
+            >
               <CardHeader className="pb-4">
                 <CardTitle className="text-xl font-semibold font-headline text-primary">{project.title}</CardTitle>
               </CardHeader>
               <CardContent className="flex-grow space-y-3">
-                {project.description.map((desc, index) => (
-                  <p key={index} className="text-sm text-foreground/80 leading-relaxed">
+                {project.description.map((desc, idx) => (
+                  <p key={idx} className="text-sm text-foreground/80 leading-relaxed">
                     {desc}
                   </p>
                 ))}

@@ -1,3 +1,4 @@
+
 import { portfolioData } from "@/lib/portfolio-data";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -16,19 +17,29 @@ export function SkillsSection() {
     <section id="skills" className="py-16 sm:py-24 bg-secondary/30">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="font-headline text-4xl font-bold text-primary sm:text-5xl">
+          <h2 
+            className="font-headline text-4xl font-bold text-primary sm:text-5xl animate-fade-in-up"
+            style={{ opacity: 0, animationDelay: '100ms' }}
+          >
             Technical Skills
           </h2>
-          <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p 
+            className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto animate-fade-in-up"
+            style={{ opacity: 0, animationDelay: '200ms' }}
+          >
             A collection of technologies and tools I'm proficient with.
           </p>
         </div>
         
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {portfolioData.skills.map((skillCategory) => {
+          {portfolioData.skills.map((skillCategory, index) => {
             const Icon = categoryIcons[skillCategory.category] || CheckCircle;
             return (
-              <Card key={skillCategory.category} className="shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <Card 
+                key={skillCategory.category} 
+                className="shadow-lg transition-all duration-300 ease-in-out hover:shadow-xl hover:scale-[1.03] hover:-translate-y-1 animate-fade-in-up"
+                style={{ opacity: 0, animationDelay: `${200 + index * 100}ms` }}
+              >
                 <CardHeader>
                   <CardTitle className="flex items-center text-xl font-semibold text-primary">
                     <Icon className="mr-3 h-6 w-6 text-primary/80" />
