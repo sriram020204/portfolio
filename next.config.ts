@@ -3,6 +3,7 @@ import type {NextConfig} from 'next';
 
 const nextConfig: NextConfig = {
   output: 'export', // Enable static HTML export
+  basePath: '/YOUR_REPOSITORY_NAME_HERE', // IMPORTANT: Replace YOUR_REPOSITORY_NAME_HERE with your actual GitHub repository name
   images: {
     unoptimized: true, // Disable Next.js Image Optimization for static hosting
     remotePatterns: [
