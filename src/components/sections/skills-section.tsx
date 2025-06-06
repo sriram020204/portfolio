@@ -2,15 +2,13 @@
 import { portfolioData } from "@/lib/portfolio-data";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { CheckCircle, Code, Database, Cpu, GitFork, Wrench } from "lucide-react";
-import { cn } from "@/lib/utils";
+import { CheckCircle, Code, Database, Cpu, GitFork } from "lucide-react";
 
 const categoryIcons: { [key: string]: React.ElementType } = {
   "Languages": Code,
   "Machine Learning": Cpu,
   "Data Science & Analytics": Database,
   "Developer Tools": GitFork,
-  "Libraries & Frameworks": Wrench, // Using Wrench as a generic icon for tools/libraries
 };
 
 export function SkillsSection() {
@@ -38,12 +36,7 @@ export function SkillsSection() {
             return (
               <Card
                 key={skillCategory.category}
-                className={cn(
-                  "shadow-lg transition-all duration-300 ease-in-out hover:shadow-xl hover:scale-[1.07] hover:-translate-y-1 animate-fade-in-up",
-                  {
-                    "md:col-span-2 lg:col-span-3": skillCategory.category === "Libraries & Frameworks"
-                  }
-                )}
+                className="shadow-lg transition-all duration-300 ease-in-out hover:shadow-xl hover:scale-[1.07] hover:-translate-y-1 animate-fade-in-up"
                 style={{ opacity: 0, animationDelay: `${300 + index * 100}ms` }}
               >
                 <CardHeader>
