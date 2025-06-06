@@ -4,6 +4,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
+import Image from "next/image";
 import { Github, ExternalLink, Briefcase } from "lucide-react";
 
 export function ProjectsSection() {
@@ -33,6 +34,17 @@ export function ProjectsSection() {
               className="flex flex-col overflow-hidden shadow-lg transition-all duration-300 ease-in-out hover:shadow-xl hover:scale-[1.03] hover:-translate-y-1 animate-fade-in-up"
               style={{ opacity: 0, animationDelay: `${200 + index * 100}ms` }}
             >
+              {project.imageUrl && (
+                <div className="relative aspect-video w-full overflow-hidden rounded-t-lg">
+                  <Image
+                    src={project.imageUrl}
+                    alt={`Visual representation of ${project.title}`}
+                    fill
+                    className="object-cover"
+                    data-ai-hint={project.imageHint || "project technology"}
+                  />
+                </div>
+              )}
               <CardHeader className="pb-4">
                 <CardTitle className="text-xl font-semibold font-headline text-primary">{project.title}</CardTitle>
               </CardHeader>
