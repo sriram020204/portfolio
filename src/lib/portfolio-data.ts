@@ -112,7 +112,7 @@ export const portfolioData: PortfolioData = {
     {
       company: "Quadric IT",
       role: "AI/ML Intern",
-      dates: "May 2024 – Present",
+      dates: "May 2025 – Present",
       description: [
         "Currently working on extracting eligibility criteria from tender documents.",
         "Developing methods to compare extracted tender information with company profiles.",
