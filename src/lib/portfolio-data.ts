@@ -58,7 +58,7 @@ export const portfolioData: PortfolioData = {
     { category: "Machine Learning", skills: ["Deep Learning", "Neural Networks", "Image Processing", "Natural Language Processing (NLP)"] },
     { category: "Data Science & Analytics", skills: ["Data Pre-processing", "Feature Engineering", "Exploratory Data Analysis (EDA)", "Statistical Analysis", "Predictive Modeling"] },
     { category: "Developer Tools", skills: ["Git", "GitHub"] },
-    { category: "Libraries & Frameworks", skills: ["Pandas", "NumPy", "Scikit-Learn", "TensorFlow", "Keras", "NLTK", "Matplotlib", "Seaborn", "PyTorch"] }
+    { category: "Libraries & Frameworks", skills: ["Pandas", "NumPy", "Scikit-Learn", "TensorFlow", "Keras", "NLTK", "Matplotlib", "Seaborn", "PyTorch", "spaCy"] }
   ],
   projects: [
     {
