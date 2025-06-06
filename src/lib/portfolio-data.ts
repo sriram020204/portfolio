@@ -55,10 +55,10 @@ export const portfolioData: PortfolioData = {
   ],
   skills: [
     { category: "Languages", skills: ["Python", "Java", "C", "MySQL"] },
-    { category: "Machine Learning", skills: ["Deep Learning", "Neural Networks", "Image Processing", "Natural Language Processing (NLP)"] },
+    { category: "Machine Learning", skills: ["Deep Learning", "Neural Networks", "Image Processing", "Natural Language Processing (NLP)", "LLM Fine-tuning"] },
     { category: "Data Science & Analytics", skills: ["Data Pre-processing", "Feature Engineering", "Exploratory Data Analysis (EDA)", "Statistical Analysis", "Predictive Modeling"] },
-    { category: "Developer Tools", skills: ["Git", "GitHub"] },
-    { category: "Libraries & Frameworks", skills: ["Pandas", "NumPy", "Scikit-Learn", "TensorFlow", "Keras", "NLTK", "Matplotlib", "Seaborn", "PyTorch", "spaCy"] }
+    { category: "Developer Tools", skills: ["Git", "GitHub", "Azure"] },
+    { category: "Libraries & Frameworks", skills: ["Pandas", "NumPy", "Scikit-Learn", "TensorFlow", "Keras", "NLTK", "Matplotlib", "Seaborn", "PyTorch", "spaCy", "Hugging Face Transformers"] }
   ],
   projects: [
     {
