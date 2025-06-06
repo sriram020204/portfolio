@@ -2,18 +2,13 @@
 import { portfolioData } from "@/lib/portfolio-data";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { CheckCircle, Code, Database, Cpu, GitFork, Layers, FlaskConical, MessageSquareText, BarChartBig } from "lucide-react";
+import { CheckCircle, Code, Database, Cpu, GitFork } from "lucide-react";
 
 const categoryIcons: { [key: string]: React.ElementType } = {
   "Languages": Code,
   "Machine Learning": Cpu,
   "Data Science & Analytics": Database,
   "Developer Tools": GitFork,
-  "Data Manipulation & Analysis": Database,
-  "General Machine Learning Libraries": FlaskConical,
-  "Deep Learning Frameworks": Layers,
-  "Natural Language Processing Libraries": MessageSquareText,
-  "Data Visualization Libraries": BarChartBig,
 };
 
 export function SkillsSection() {
