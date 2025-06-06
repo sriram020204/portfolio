@@ -8,9 +8,9 @@ import { Label } from "@/components/ui/label";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Github, Linkedin, Mail, Phone, Send } from "lucide-react";
 import Link from "next/link";
-import { useFormState, useFormStatus } from "react-dom";
+import { useActionState, useEffect } from "react"; // Changed from react-dom's useFormState
+import { useFormStatus } from "react-dom";
 import { submitContactForm, type ContactFormState } from "@/app/actions/contact";
-import { useEffect } from "react";
 import { useToast } from "@/hooks/use-toast";
 
 const initialState: ContactFormState = {
@@ -29,7 +29,7 @@ function SubmitButton() {
 }
 
 export function ContactSection() {
-  const [state, formAction] = useFormState(submitContactForm, initialState);
+  const [state, formAction] = useActionState(submitContactForm, initialState); // Changed to useActionState
   const { toast } = useToast();
 
   useEffect(() => {
@@ -38,7 +38,7 @@ export function ContactSection() {
         title: "Message Sent!",
         description: state.message,
       });
-      // Optionally reset form fields here if not handled by useFormState behavior
+      // Optionally reset form fields here if not handled by useActionState behavior
     } else if (state.status === "error" && state.message && !state.errors) { // General error message
       toast({
         title: "Error",
