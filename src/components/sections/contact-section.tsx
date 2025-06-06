@@ -94,7 +94,7 @@ export function ContactSection() {
           </div>
 
           <Card 
-            className="shadow-lg transition-all duration-300 ease-in-out hover:shadow-xl hover:scale-[1.02] hover:-translate-y-1 animate-fade-in-up"
+            className="shadow-lg transition-all duration-300 ease-in-out hover:shadow-xl hover:scale-[1.04] hover:-translate-y-1 animate-fade-in-up"
             style={{ opacity: 0, animationDelay: '400ms' }}
           >
             <CardHeader>
@@ -128,3 +128,4 @@ export function ContactSection() {
     </section>
   );
 }
+

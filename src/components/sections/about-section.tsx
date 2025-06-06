@@ -27,7 +27,7 @@ export function AboutSection() {
             className="md:col-span-3 animate-fade-in-up"
             style={{ opacity: 0, animationDelay: '300ms' }}
           >
-            <Card className="shadow-lg transition-all duration-300 ease-in-out hover:shadow-xl hover:scale-[1.02] hover:-translate-y-1">
+            <Card className="shadow-lg transition-all duration-300 ease-in-out hover:shadow-xl hover:scale-[1.04] hover:-translate-y-1">
               <CardHeader>
                 <CardTitle className="flex items-center text-2xl font-semibold text-primary">
                   <UserCircle className="mr-3 h-8 w-8" />
@@ -46,3 +46,4 @@ export function AboutSection() {
     </section>
   );
 }
+

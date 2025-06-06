@@ -9,12 +9,7 @@ const categoryIcons: { [key: string]: React.ElementType } = {
   "Machine Learning": Cpu,
   "Data Science & Analytics": Database,
   "Developer Tools": GitFork,
-  "Data Manipulation & Analysis": Database,
-  "General Machine Learning Libraries": FlaskConical,
-  "Deep Learning Frameworks": Layers,
-  "Natural Language Processing Libraries": MessageSquareText,
-  "Data Visualization Libraries": BarChartBig,
-  "Libraries & Frameworks": CheckCircle, // Fallback/Original
+  "Libraries & Frameworks": CheckCircle,
 };
 
 export function SkillsSection() {
@@ -42,7 +37,7 @@ export function SkillsSection() {
             return (
               <Card 
                 key={skillCategory.category} 
-                className="shadow-lg transition-all duration-300 ease-in-out hover:shadow-xl hover:scale-[1.03] hover:-translate-y-1 animate-fade-in-up"
+                className="shadow-lg transition-all duration-300 ease-in-out hover:shadow-xl hover:scale-[1.05] hover:-translate-y-1 animate-fade-in-up"
                 style={{ opacity: 0, animationDelay: `${300 + index * 100}ms` }}
               >
                 <CardHeader>
@@ -68,3 +63,4 @@ export function SkillsSection() {
     </section>
   );
 }
+

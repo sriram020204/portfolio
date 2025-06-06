@@ -26,7 +26,7 @@ export function EducationSection() {
           {portfolioData.education.map((edu, index) => (
             <Card 
               key={index} 
-              className="shadow-lg mb-6 transition-all duration-300 ease-in-out hover:shadow-xl hover:scale-[1.03] hover:-translate-y-1 animate-fade-in-up"
+              className="shadow-lg mb-6 transition-all duration-300 ease-in-out hover:shadow-xl hover:scale-[1.05] hover:-translate-y-1 animate-fade-in-up"
               style={{ opacity: 0, animationDelay: `${300 + index * 100}ms` }}
             >
               <CardHeader>
@@ -55,3 +55,4 @@ export function EducationSection() {
     </section>
   );
 }
+
