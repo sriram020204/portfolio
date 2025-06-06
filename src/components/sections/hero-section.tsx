@@ -1,9 +1,49 @@
+
+"use client";
+
 import { portfolioData } from "@/lib/portfolio-data";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
+import React, { useState, useEffect } from "react";
 
 export function HeroSection() {
+  const [hasMounted, setHasMounted] = useState(false);
+
+  useEffect(() => {
+    setHasMounted(true);
+  }, []);
+
+  if (!hasMounted) {
+    return (
+      <section
+        id="hero"
+        className="flex min-h-[calc(100vh-5rem)] items-center bg-gradient-to-br from-background to-secondary/30 py-20"
+      >
+        <div className="container mx-auto px-4 text-center sm:px-6 lg:px-8">
+          <h1 className="font-headline text-5xl font-bold tracking-tight text-primary sm:text-6xl md:text-7xl">
+            {portfolioData.name}
+          </h1>
+          <p className="mt-6 text-xl text-foreground/90 sm:text-2xl md:text-3xl">
+            {portfolioData.role}
+          </p>
+          <p className="mx-auto mt-8 max-w-3xl text-lg text-muted-foreground sm:text-xl">
+            {portfolioData.heroTagline}
+          </p>
+          <div className="mt-12 flex flex-col items-center justify-center gap-4 sm:flex-row">
+            <div className="h-11 w-40 animate-pulse rounded-md bg-muted/30" />
+            <div className="h-11 w-40 animate-pulse rounded-md bg-muted/30" />
+          </div>
+          <div className="mt-12 flex justify-center space-x-6">
+            <div className="h-10 w-10 animate-pulse rounded-full bg-muted/30" />
+            <div className="h-10 w-10 animate-pulse rounded-full bg-muted/30" />
+            <div className="h-10 w-10 animate-pulse rounded-full bg-muted/30" />
+          </div>
+        </div>
+      </section>
+    );
+  }
+
   return (
     <section
       id="hero"
