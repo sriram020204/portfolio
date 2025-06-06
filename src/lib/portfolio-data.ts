@@ -57,7 +57,7 @@ export const portfolioData: PortfolioData = {
     phone: "+91 8790567522",
     linkedin: "https://www.linkedin.com/in/sriram-kumar-reddy-ginjala/",
     github: "https://github.com/sriram020204",
-    kaggle: "https://www.kaggle.com/yourusername", // Replace with your actual Kaggle username
+    kaggle: "https://www.kaggle.com/yourusername",
   },
   heroTagline: "Passionate about machine learning and dedicated to advancing technology through impactful projects.",
   aboutMe: [
@@ -69,7 +69,52 @@ export const portfolioData: PortfolioData = {
     { category: "Machine Learning", skills: ["Deep Learning", "Image Processing", "Natural Language Processing (NLP)", "LLM Fine-tuning"] },
     { category: "Data Science & Analytics", skills: ["Data Pre-processing", "Feature Engineering", "Exploratory Data Analysis (EDA)", "Statistical Analysis", "Predictive Modeling"] },
     { category: "Developer Tools", skills: ["Git", "GitHub", "Azure"] },
-    { category: "Libraries & Frameworks", skills: ["Pandas", "NumPy", "Scikit-Learn", "TensorFlow", "Keras", "PyTorch", "NLTK", "Matplotlib", "Seaborn", "spaCy", "Hugging Face Transformers"] }
+    { 
+      category: "Libraries & Frameworks", 
+      skills: [
+        "Albumentations",
+        "Azure Core",
+        "Azure Document Intelligence",
+        "Azure Storage SDK",
+        "Darts",
+        "fastai",
+        "Google Cloud AI Platform",
+        "Google Cloud BigQuery",
+        "Google Cloud Storage",
+        "Hugging Face Hub",
+        "Hugging Face Transformers",
+        "imgaug",
+        "IPython",
+        "joblib",
+        "Jupyter",
+        "Keras",
+        "keras-ocr",
+        "matplotlib",
+        "NLTK",
+        "NumPy",
+        "OpenAI API",
+        "openpyxl",
+        "paddleocr",
+        "pandas",
+        "pdfplumber",
+        "Plotly",
+        "Prophet",
+        "PyTorch",
+        "pytorch-forecasting",
+        "pytorch-lightning",
+        "pytesseract",
+        "scikit-learn",
+        "SciPy",
+        "seaborn",
+        "sentence-transformers",
+        "shap",
+        "spaCy",
+        "statsforecast",
+        "statsmodels",
+        "TensorFlow",
+        "XGBoost"
+      ] 
+    }
   ],
   projects: [
     {
