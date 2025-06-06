@@ -42,10 +42,12 @@ export function ContactSection() {
           </p>
         </div>
 
-        <div className="max-w-2xl mx-auto">
+        <div 
+          className="animate-fade-in-up"
+          style={{ opacity: 0, animationDelay: '300ms' }}
+        >
           <Card
-            className="shadow-lg transition-all duration-300 ease-in-out hover:shadow-xl hover:scale-[1.07] hover:-translate-y-1 animate-fade-in-up"
-            style={{ opacity: 0, animationDelay: '300ms' }}
+            className="shadow-lg transition-all duration-300 ease-in-out hover:shadow-xl hover:scale-[1.07] hover:-translate-y-1"
           >
             <CardHeader>
               <CardTitle className="flex items-center text-2xl font-semibold text-primary">
@@ -53,7 +55,7 @@ export function ContactSection() {
                 Contact Information
               </CardTitle>
             </CardHeader>
-            <CardContent className="space-y-4 py-6">
+            <CardContent className="space-y-4">
               <Link href={`mailto:${portfolioData.contact.email}`} className="flex items-center group">
                 <Mail className="mr-3 h-6 w-6 text-primary/80 group-hover:text-primary transition-colors" />
                 <span className="text-base text-foreground/90 group-hover:text-primary transition-colors">{portfolioData.contact.email}</span>
