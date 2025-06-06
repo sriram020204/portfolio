@@ -42,7 +42,7 @@ export function ContactSection() {
           </p>
         </div>
 
-        <div className="max-w-md mx-auto">
+        <div className="max-w-lg mx-auto">
           <Card
             className="shadow-lg transition-all duration-300 ease-in-out hover:shadow-xl hover:scale-[1.07] hover:-translate-y-1 animate-fade-in-up"
             style={{ opacity: 0, animationDelay: '300ms' }}
@@ -64,16 +64,16 @@ export function ContactSection() {
               </Link>
               <Link href={portfolioData.contact.linkedin} target="_blank" rel="noopener noreferrer" className="flex items-center group">
                 <Linkedin className="mr-3 h-6 w-6 text-primary/80 group-hover:text-primary transition-colors" />
-                <span className="text-base text-foreground/90 group-hover:text-primary transition-colors">LinkedIn Profile</span>
+                <span className="text-base text-foreground/90 group-hover:text-primary transition-colors">LinkedIn</span>
               </Link>
               <Link href={portfolioData.contact.github} target="_blank" rel="noopener noreferrer" className="flex items-center group">
                 <Github className="mr-3 h-6 w-6 text-primary/80 group-hover:text-primary transition-colors" />
-                <span className="text-base text-foreground/90 group-hover:text-primary transition-colors">GitHub Profile</span>
+                <span className="text-base text-foreground/90 group-hover:text-primary transition-colors">GitHub</span>
               </Link>
               {portfolioData.contact.kaggle && (
                 <Link href={portfolioData.contact.kaggle} target="_blank" rel="noopener noreferrer" className="flex items-center group">
                   <KaggleIcon className="mr-3 h-6 w-6 text-primary/80 group-hover:text-primary transition-colors" />
-                  <span className="text-base text-foreground/90 group-hover:text-primary transition-colors">Kaggle Profile</span>
+                  <span className="text-base text-foreground/90 group-hover:text-primary transition-colors">Kaggle</span>
                 </Link>
               )}
             </CardContent>
