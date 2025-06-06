@@ -3,7 +3,6 @@
 
 import { portfolioData } from "@/lib/portfolio-data";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Github, Linkedin, Mail, Phone } from "lucide-react";
 import Link from "next/link";
 import React from 'react';
@@ -42,44 +41,34 @@ export function ContactSection() {
           </p>
         </div>
 
-        <div 
+        <div
           className="animate-fade-in-up"
           style={{ opacity: 0, animationDelay: '300ms' }}
         >
-          <Card
-            className="shadow-lg transition-all duration-300 ease-in-out hover:shadow-xl hover:scale-[1.07] hover:-translate-y-1"
-          >
-            <CardHeader>
-              <CardTitle className="flex items-center text-2xl font-semibold text-primary">
-                <Mail className="mr-3 h-8 w-8" />
-                Contact Information
-              </CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-4">
-              <Link href={`mailto:${portfolioData.contact.email}`} className="flex items-center group">
-                <Mail className="mr-3 h-6 w-6 text-primary/80 group-hover:text-primary transition-colors" />
-                <span className="text-base text-foreground/90 group-hover:text-primary transition-colors">{portfolioData.contact.email}</span>
+          <div className="mt-8 flex flex-wrap items-center justify-center gap-x-8 gap-y-6 sm:gap-x-10 md:gap-x-12">
+            <Link href={`mailto:${portfolioData.contact.email}`} className="flex items-center group text-base sm:text-lg">
+              <Mail className="mr-2 h-5 w-5 sm:mr-3 sm:h-6 sm:w-6 text-primary/80 group-hover:text-primary transition-colors" />
+              <span className="text-foreground/90 group-hover:text-primary transition-colors">{portfolioData.contact.email}</span>
+            </Link>
+            <Link href={`tel:${portfolioData.contact.phone.replace(/\s/g, "")}`} className="flex items-center group text-base sm:text-lg">
+              <Phone className="mr-2 h-5 w-5 sm:mr-3 sm:h-6 sm:w-6 text-primary/80 group-hover:text-primary transition-colors" />
+              <span className="text-foreground/90 group-hover:text-primary transition-colors">{portfolioData.contact.phone}</span>
+            </Link>
+            <Link href={portfolioData.contact.linkedin} target="_blank" rel="noopener noreferrer" className="flex items-center group text-base sm:text-lg">
+              <Linkedin className="mr-2 h-5 w-5 sm:mr-3 sm:h-6 sm:w-6 text-primary/80 group-hover:text-primary transition-colors" />
+              <span className="text-foreground/90 group-hover:text-primary transition-colors">LinkedIn</span>
+            </Link>
+            <Link href={portfolioData.contact.github} target="_blank" rel="noopener noreferrer" className="flex items-center group text-base sm:text-lg">
+              <Github className="mr-2 h-5 w-5 sm:mr-3 sm:h-6 sm:w-6 text-primary/80 group-hover:text-primary transition-colors" />
+              <span className="text-foreground/90 group-hover:text-primary transition-colors">GitHub</span>
+            </Link>
+            {portfolioData.contact.kaggle && (
+              <Link href={portfolioData.contact.kaggle} target="_blank" rel="noopener noreferrer" className="flex items-center group text-base sm:text-lg">
+                <KaggleIcon className="mr-2 h-5 w-5 sm:mr-3 sm:h-6 sm:w-6 text-primary/80 group-hover:text-primary transition-colors" />
+                <span className="text-foreground/90 group-hover:text-primary transition-colors">Kaggle</span>
               </Link>
-              <Link href={`tel:${portfolioData.contact.phone.replace(/\s/g, "")}`} className="flex items-center group">
-                <Phone className="mr-3 h-6 w-6 text-primary/80 group-hover:text-primary transition-colors" />
-                <span className="text-base text-foreground/90 group-hover:text-primary transition-colors">{portfolioData.contact.phone}</span>
-              </Link>
-              <Link href={portfolioData.contact.linkedin} target="_blank" rel="noopener noreferrer" className="flex items-center group">
-                <Linkedin className="mr-3 h-6 w-6 text-primary/80 group-hover:text-primary transition-colors" />
-                <span className="text-base text-foreground/90 group-hover:text-primary transition-colors">LinkedIn</span>
-              </Link>
-              <Link href={portfolioData.contact.github} target="_blank" rel="noopener noreferrer" className="flex items-center group">
-                <Github className="mr-3 h-6 w-6 text-primary/80 group-hover:text-primary transition-colors" />
-                <span className="text-base text-foreground/90 group-hover:text-primary transition-colors">GitHub</span>
-              </Link>
-              {portfolioData.contact.kaggle && (
-                <Link href={portfolioData.contact.kaggle} target="_blank" rel="noopener noreferrer" className="flex items-center group">
-                  <KaggleIcon className="mr-3 h-6 w-6 text-primary/80 group-hover:text-primary transition-colors" />
-                  <span className="text-base text-foreground/90 group-hover:text-primary transition-colors">Kaggle</span>
-                </Link>
-              )}
-            </CardContent>
-          </Card>
+            )}
+          </div>
         </div>
       </div>
     </section>
