@@ -2,7 +2,7 @@
 import { portfolioData } from "@/lib/portfolio-data";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { CheckCircle, Code, Database, Cpu, GitFork, Layers, FlaskConical, MessageSquareText, BarChartBig } from "lucide-react";
+import { CheckCircle, Code, Database, Cpu, GitFork } from "lucide-react";
 
 const categoryIcons: { [key: string]: React.ElementType } = {
   "Languages": Code,
@@ -37,7 +37,7 @@ export function SkillsSection() {
             return (
               <Card 
                 key={skillCategory.category} 
-                className="shadow-lg transition-all duration-300 ease-in-out hover:shadow-xl hover:scale-[1.05] hover:-translate-y-1 animate-fade-in-up"
+                className="shadow-lg transition-all duration-300 ease-in-out hover:shadow-xl hover:scale-[1.07] hover:-translate-y-1 animate-fade-in-up"
                 style={{ opacity: 0, animationDelay: `${300 + index * 100}ms` }}
               >
                 <CardHeader>
