@@ -53,7 +53,7 @@ export function ContactSection() {
                 Contact Information
               </CardTitle>
             </CardHeader>
-            <CardContent className="space-y-4">
+            <CardContent className="space-y-6 py-8">
               <Link href={`mailto:${portfolioData.contact.email}`} className="flex items-center group">
                 <Mail className="mr-3 h-6 w-6 text-primary/80 group-hover:text-primary transition-colors" />
                 <span className="text-base text-foreground/90 group-hover:text-primary transition-colors">{portfolioData.contact.email}</span>
