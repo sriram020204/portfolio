@@ -22,37 +22,40 @@ export function EducationSection() {
           </p>
         </div>
         
-        <div>
+        <div className="space-y-8">
           {portfolioData.education.map((edu, index) => (
-            <Card 
-              key={index} 
-              className="shadow-lg mb-6 transition-all duration-300 ease-in-out hover:shadow-xl hover:scale-[1.07] hover:-translate-y-1 animate-fade-in-up"
-              style={{ opacity: 0, animationDelay: `${400 + index * 100}ms` }}
+            <div
+              key={edu.institution + '-' + index} 
+              className="animate-fade-in-up"
+              style={{ opacity: 0, animationDelay: `${300 + index * 100}ms` }}
             >
-              <CardHeader>
-                <CardTitle className="text-xl font-semibold font-headline text-primary">{edu.institution}</CardTitle>
-                <CardDescription className="text-md text-muted-foreground">{edu.degree}</CardDescription>
-              </CardHeader>
-              <CardContent className="space-y-2">
-                <div className="flex items-center text-base text-foreground/90">
-                  <CalendarDays className="mr-2 h-4 w-4 text-primary/70" />
-                  <span>{edu.dates}</span>
-                </div>
-                {edu.gpa && (
+              <Card 
+                className="shadow-lg transition-all duration-300 ease-in-out hover:shadow-xl hover:scale-[1.07] hover:-translate-y-1"
+              >
+                <CardHeader>
+                  <CardTitle className="text-xl font-semibold font-headline text-primary">{edu.institution}</CardTitle>
+                  <CardDescription className="text-md text-muted-foreground">{edu.degree}</CardDescription>
+                </CardHeader>
+                <CardContent className="space-y-2">
                   <div className="flex items-center text-base text-foreground/90">
-                    <Award className="mr-2 h-4 w-4 text-primary/70" />
-                    <span>GPA: {edu.gpa}</span>
+                    <CalendarDays className="mr-2 h-4 w-4 text-primary/70" />
+                    <span>{edu.dates}</span>
                   </div>
-                )}
-                {edu.details && edu.details.map((detail, i) => (
-                  <p key={i} className="text-base text-foreground/90 leading-relaxed">{detail}</p>
-                ))}
-              </CardContent>
-            </Card>
+                  {edu.gpa && (
+                    <div className="flex items-center text-base text-foreground/90">
+                      <Award className="mr-2 h-4 w-4 text-primary/70" />
+                      <span>GPA: {edu.gpa}</span>
+                    </div>
+                  )}
+                  {edu.details && edu.details.map((detail, i) => (
+                    <p key={i} className="text-base text-foreground/90 leading-relaxed">{detail}</p>
+                  ))}
+                </CardContent>
+              </Card>
+            </div>
           ))}
         </div>
       </div>
     </section>
   );
 }
-
