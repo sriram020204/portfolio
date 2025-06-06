@@ -57,6 +57,10 @@ export function HeroSection() {
     );
   }
 
+  const nameParts = portfolioData.name.split(" ");
+  const firstName = nameParts[0];
+  const lastName = nameParts.slice(1).join(" ");
+
   return (
     <section
       id="hero"
@@ -64,10 +68,10 @@ export function HeroSection() {
     >
       <div className="container mx-auto px-4 text-center sm:px-6 lg:px-8">
         <h1
-          className="font-headline text-5xl font-bold tracking-tight text-primary sm:text-6xl md:text-7xl animate-fade-in-up"
+          className="font-headline text-5xl font-bold tracking-tight sm:text-6xl md:text-7xl animate-fade-in-up"
           style={{ animationDelay: '100ms', opacity: 0 }}
         >
-          {portfolioData.name}
+          <span className="text-primary">{firstName}</span> <span className="text-foreground/80">{lastName}</span>
         </h1>
         <div
           className="mt-6 text-xl text-foreground/90 sm:text-2xl md:text-3xl animate-fade-in-up min-h-[2.5em] sm:min-h-[2.8em] md:min-h-[3em]"

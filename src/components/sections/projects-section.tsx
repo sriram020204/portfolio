@@ -35,7 +35,7 @@ function ProjectCard({ project, index }: ProjectCardProps) {
             </p>
           ))}
           <div className="pt-2">
-            <h4 className="text-sm font-medium text-muted-foreground mb-2">Tech Stack:</h4>
+            <h4 className="text-sm font-medium text-secondary-foreground mb-2">Tech Stack:</h4>
             <div className="flex flex-wrap gap-2">
               {project.techStack.map((tech) => (
                 <Badge key={tech} variant="outline" className="text-xs">
