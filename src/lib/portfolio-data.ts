@@ -6,8 +6,6 @@ export interface Project {
   techStack: string[];
   githubLink?: string;
   liveLink?: string;
-  imageUrl?: string;
-  imageHint?: string;
 }
 
 export interface SkillCategory {
@@ -84,8 +82,6 @@ export const portfolioData: PortfolioData = {
       ],
       techStack: ["Python", "Scikit-Learn", "Pandas", "NumPy"],
       githubLink: "https://github.com/SlayZ121/Medico",
-      imageUrl: "https://placehold.co/600x400.png",
-      imageHint: "health tech",
     },
     {
       id: "electricity-demand",
@@ -97,8 +93,6 @@ export const portfolioData: PortfolioData = {
         "Designed model pipeline from data cleaning to deployment-ready results."
       ],
       techStack: ["Python", "TensorFlow", "Keras", "Pandas", "NumPy"],
-      imageUrl: "https://placehold.co/600x400.png",
-      imageHint: "data forecast",
     },
     {
       id: "spam-classifier",
@@ -112,8 +106,6 @@ export const portfolioData: PortfolioData = {
       ],
       techStack: ["Python", "Scikit-Learn", "NLTK", "Pandas", "Matplotlib"],
       githubLink: "https://github.com/sriram020204",
-      imageUrl: "https://placehold.co/600x400.png",
-      imageHint: "text analysis",
     }
   ],
   experience: [
