@@ -26,7 +26,7 @@ export function ExperienceSection() {
           </p>
         </div>
         
-        <div className="max-w-3xl mx-auto space-y-8">
+        <div className="space-y-8">
           {portfolioData.experience.map((exp, index) => (
             <Card 
               key={index} 
