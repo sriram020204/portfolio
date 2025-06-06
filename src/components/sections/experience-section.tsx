@@ -39,7 +39,11 @@ export function ExperienceSection() {
                 className="shadow-lg transition-all duration-300 ease-in-out hover:shadow-xl hover:scale-[1.07] hover:-translate-y-1"
               >
                 <CardHeader>
-                  <CardTitle className="text-xl font-semibold font-headline text-primary">{exp.role}</CardTitle>
+                  <CardTitle className="text-xl font-semibold font-headline">
+                    <span className="bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent animate-text-gradient-flow bg-[size:200%_auto]">
+                      {exp.role}
+                    </span>
+                  </CardTitle>
                   <CardDescription className="text-md text-muted-foreground">{exp.company}</CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-3">

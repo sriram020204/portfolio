@@ -26,7 +26,11 @@ function ProjectCard({ project, index }: ProjectCardProps) {
         className="flex flex-col overflow-hidden shadow-lg transition-all duration-300 ease-in-out hover:shadow-xl hover:scale-[1.07] hover:-translate-y-1 h-full"
       >
         <CardHeader className="pb-4">
-          <CardTitle className="text-xl font-semibold font-headline text-primary">{project.title}</CardTitle>
+          <CardTitle className="text-xl font-semibold font-headline">
+            <span className="bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent animate-text-gradient-flow bg-[size:200%_auto]">
+              {project.title}
+            </span>
+          </CardTitle>
         </CardHeader>
         <CardContent className="flex-grow space-y-3">
           {project.description.map((desc, idx) => (

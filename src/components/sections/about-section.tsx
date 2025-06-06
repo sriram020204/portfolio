@@ -30,9 +30,11 @@ export function AboutSection() {
         >
           <Card className="shadow-lg transition-all duration-300 ease-in-out hover:shadow-xl hover:scale-[1.07] hover:-translate-y-1">
             <CardHeader>
-              <CardTitle className="flex items-center text-2xl font-semibold text-primary">
-                <UserCircle className="mr-3 h-8 w-8" />
-                {portfolioData.name}
+              <CardTitle className="flex items-center text-2xl font-semibold">
+                <UserCircle className="mr-3 h-8 w-8 text-primary" />
+                <span className="bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent animate-text-gradient-flow bg-[size:200%_auto]">
+                  {portfolioData.name}
+                </span>
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-4 text-base text-foreground/90 leading-relaxed">

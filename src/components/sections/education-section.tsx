@@ -32,10 +32,14 @@ export function EducationSection() {
               style={{ opacity: 0, animationDelay: `${300 + index * 100}ms` }}
             >
               <Card 
-                className="shadow-lg transition-all duration-300 ease-in-out hover:shadow-xl hover:scale-[1.07] hover:-translate-y-1 max-w-3xl mx-auto"
+                className="shadow-lg transition-all duration-300 ease-in-out hover:shadow-xl hover:scale-[1.07] hover:-translate-y-1"
               >
                 <CardHeader>
-                  <CardTitle className="text-xl font-semibold font-headline text-primary">{edu.institution}</CardTitle>
+                  <CardTitle className="text-xl font-semibold font-headline">
+                    <span className="bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent animate-text-gradient-flow bg-[size:200%_auto]">
+                      {edu.institution}
+                    </span>
+                  </CardTitle>
                   <CardDescription className="text-md text-muted-foreground">{edu.degree}</CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-2">

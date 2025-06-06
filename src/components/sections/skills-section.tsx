@@ -46,9 +46,11 @@ export function SkillsSection() {
                   className="shadow-lg transition-all duration-300 ease-in-out hover:shadow-xl hover:scale-[1.07] hover:-translate-y-1 h-full"
                 >
                   <CardHeader>
-                    <CardTitle className="flex items-center text-xl font-semibold text-primary">
+                    <CardTitle className="flex items-center text-xl font-semibold">
                       <Icon className="mr-3 h-6 w-6 text-primary/80" />
-                      {skillCategory.category}
+                      <span className="bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent animate-text-gradient-flow bg-[size:200%_auto]">
+                        {skillCategory.category}
+                      </span>
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
