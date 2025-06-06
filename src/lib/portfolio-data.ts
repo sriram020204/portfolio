@@ -118,7 +118,7 @@ export const portfolioData: PortfolioData = {
         "Developing methods to compare extracted tender information with company profiles.",
         "This is an ongoing project focused on automating and improving the tender bidding process."
       ],
-      location: "Hyderabad, Telangana (Remote)"
+      location: "Hyderabad, Telangana (On-site)"
     }
   ],
   education: [
