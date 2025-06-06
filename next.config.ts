@@ -1,14 +1,10 @@
+
 import type {NextConfig} from 'next';
 
 const nextConfig: NextConfig = {
-  /* config options here */
-  typescript: {
-    ignoreBuildErrors: true,
-  },
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
+  output: 'export', // Enable static HTML export
   images: {
+    unoptimized: true, // Disable Next.js Image Optimization for static hosting
     remotePatterns: [
       {
         protocol: 'https',
@@ -17,6 +13,13 @@ const nextConfig: NextConfig = {
         pathname: '/**',
       },
     ],
+  },
+  trailingSlash: true, // Ensure all paths end with a trailing slash (e.g., /about/ instead of /about)
+  typescript: {
+    ignoreBuildErrors: true,
+  },
+  eslint: {
+    ignoreDuringBuilds: true,
   },
 };
 
