@@ -122,4 +122,21 @@ html {
     padding-left: 2px; 
     margin-left: 1px; 
   }
+
+  @keyframes text-gradient-flow {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  .animate-text-gradient-flow {
+    animation: text-gradient-flow 4s ease infinite;
+  }
 }
+
