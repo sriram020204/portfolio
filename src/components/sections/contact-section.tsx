@@ -2,7 +2,6 @@
 "use client";
 
 import { portfolioData } from "@/lib/portfolio-data";
-import { Button } from "@/components/ui/button";
 import { Github, Linkedin, Mail, Phone } from "lucide-react";
 import Link from "next/link";
 import React from 'react';
@@ -93,21 +92,21 @@ export function ContactSection() {
         >
           <div className="mt-8 flex flex-wrap items-stretch justify-center gap-4 sm:gap-6 md:gap-8">
             {contactItems.map((item) => (
-              <div 
+              <Link 
                 key={item.text} 
-                className={`flex flex-col items-center justify-center p-4 sm:p-6 border rounded-lg shadow-md hover:shadow-xl transition-all duration-300 ease-in-out transform hover:scale-[1.03] hover:-translate-y-1 bg-card text-center min-w-[150px] ${item.minWidthClass}`}
+                href={item.href} 
+                target={item.target} 
+                rel={item.target === "_blank" ? "noopener noreferrer" : undefined}
+                aria-label={item.ariaLabel}
+                className={`block p-4 sm:p-6 border rounded-lg shadow-md hover:shadow-xl transition-all duration-300 ease-in-out transform hover:scale-[1.03] hover:-translate-y-1 bg-card text-center ${item.minWidthClass} group`}
               >
-                <item.icon className="h-7 w-7 sm:h-8 sm:w-8 text-primary mb-2 sm:mb-3" />
-                <Link 
-                  href={item.href} 
-                  target={item.target} 
-                  rel={item.target === "_blank" ? "noopener noreferrer" : undefined}
-                  aria-label={item.ariaLabel}
-                  className="text-sm sm:text-base font-medium text-foreground/90 hover:text-primary transition-colors break-words"
-                >
-                  {item.text}
-                </Link>
-              </div>
+                <div className="flex flex-col items-center justify-center">
+                  <item.icon className="h-8 w-8 sm:h-10 sm:w-10 text-primary group-hover:text-accent mb-3 sm:mb-4 transition-colors" />
+                  <span className="text-base sm:text-lg font-medium text-foreground/90 break-words">
+                    {item.text}
+                  </span>
+                </div>
+              </Link>
             ))}
           </div>
         </div>
