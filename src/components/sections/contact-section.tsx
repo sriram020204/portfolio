@@ -23,6 +23,50 @@ const KaggleIcon = (props: React.SVGProps<SVGSVGElement>) => (
 
 
 export function ContactSection() {
+  const contactItems = [
+    {
+      href: `mailto:${portfolioData.contact.email}`,
+      icon: Mail,
+      text: portfolioData.contact.email,
+      ariaLabel: "Email Ginjala Sri Ram Kumar Reddy",
+      minWidthClass: "sm:min-w-[280px]",
+    },
+    {
+      href: `tel:${portfolioData.contact.phone.replace(/\s/g, "")}`,
+      icon: Phone,
+      text: portfolioData.contact.phone,
+      ariaLabel: "Call Ginjala Sri Ram Kumar Reddy",
+      minWidthClass: "sm:min-w-[240px]",
+    },
+    {
+      href: portfolioData.contact.linkedin,
+      icon: Linkedin,
+      text: "LinkedIn",
+      target: "_blank",
+      ariaLabel: "Ginjala Sri Ram Kumar Reddy's LinkedIn Profile",
+      minWidthClass: "sm:min-w-[180px]",
+    },
+    {
+      href: portfolioData.contact.github,
+      icon: Github,
+      text: "GitHub",
+      target: "_blank",
+      ariaLabel: "Ginjala Sri Ram Kumar Reddy's GitHub Profile",
+      minWidthClass: "sm:min-w-[180px]",
+    },
+  ];
+
+  if (portfolioData.contact.kaggle) {
+    contactItems.push({
+      href: portfolioData.contact.kaggle,
+      icon: KaggleIcon,
+      text: "Kaggle",
+      target: "_blank",
+      ariaLabel: "Ginjala Sri Ram Kumar Reddy's Kaggle Profile",
+      minWidthClass: "sm:min-w-[180px]",
+    });
+  }
+
   return (
     <section id="contact" className="py-16 sm:py-24 bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -45,29 +89,24 @@ export function ContactSection() {
           className="animate-fade-in-up"
           style={{ opacity: 0, animationDelay: '300ms' }}
         >
-          <div className="mt-8 flex flex-wrap items-center justify-center gap-x-8 gap-y-6 sm:gap-x-10 md:gap-x-12">
-            <Link href={`mailto:${portfolioData.contact.email}`} className="flex items-center group text-base sm:text-lg">
-              <Mail className="mr-2 h-5 w-5 sm:mr-3 sm:h-6 sm:w-6 text-primary/80 group-hover:text-primary transition-colors" />
-              <span className="text-foreground/90 group-hover:text-primary transition-colors">{portfolioData.contact.email}</span>
-            </Link>
-            <Link href={`tel:${portfolioData.contact.phone.replace(/\s/g, "")}`} className="flex items-center group text-base sm:text-lg">
-              <Phone className="mr-2 h-5 w-5 sm:mr-3 sm:h-6 sm:w-6 text-primary/80 group-hover:text-primary transition-colors" />
-              <span className="text-foreground/90 group-hover:text-primary transition-colors">{portfolioData.contact.phone}</span>
-            </Link>
-            <Link href={portfolioData.contact.linkedin} target="_blank" rel="noopener noreferrer" className="flex items-center group text-base sm:text-lg">
-              <Linkedin className="mr-2 h-5 w-5 sm:mr-3 sm:h-6 sm:w-6 text-primary/80 group-hover:text-primary transition-colors" />
-              <span className="text-foreground/90 group-hover:text-primary transition-colors">LinkedIn</span>
-            </Link>
-            <Link href={portfolioData.contact.github} target="_blank" rel="noopener noreferrer" className="flex items-center group text-base sm:text-lg">
-              <Github className="mr-2 h-5 w-5 sm:mr-3 sm:h-6 sm:w-6 text-primary/80 group-hover:text-primary transition-colors" />
-              <span className="text-foreground/90 group-hover:text-primary transition-colors">GitHub</span>
-            </Link>
-            {portfolioData.contact.kaggle && (
-              <Link href={portfolioData.contact.kaggle} target="_blank" rel="noopener noreferrer" className="flex items-center group text-base sm:text-lg">
-                <KaggleIcon className="mr-2 h-5 w-5 sm:mr-3 sm:h-6 sm:w-6 text-primary/80 group-hover:text-primary transition-colors" />
-                <span className="text-foreground/90 group-hover:text-primary transition-colors">Kaggle</span>
-              </Link>
-            )}
+          <div className="mt-8 flex flex-wrap items-stretch justify-center gap-4 sm:gap-6 md:gap-8">
+            {contactItems.map((item) => (
+              <div 
+                key={item.text} 
+                className={`flex flex-col items-center justify-center p-4 sm:p-6 border rounded-lg shadow-md hover:shadow-xl transition-all duration-300 ease-in-out transform hover:scale-[1.03] hover:-translate-y-1 bg-card text-center min-w-[150px] ${item.minWidthClass}`}
+              >
+                <item.icon className="h-7 w-7 sm:h-8 sm:w-8 text-primary mb-2 sm:mb-3" />
+                <Link 
+                  href={item.href} 
+                  target={item.target} 
+                  rel={item.target === "_blank" ? "noopener noreferrer" : undefined}
+                  aria-label={item.ariaLabel}
+                  className="text-sm sm:text-base font-medium text-foreground/90 hover:text-primary transition-colors break-words"
+                >
+                  {item.text}
+                </Link>
+              </div>
+            ))}
           </div>
         </div>
       </div>
