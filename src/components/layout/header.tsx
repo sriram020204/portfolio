@@ -1,3 +1,4 @@
+
 "use client";
 
 import Link from "next/link";
@@ -6,7 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu, Briefcase, User, Lightbulb, School, Mail } from "lucide-react";
 import { portfolioData } from "@/lib/portfolio-data";
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 const navItems = [
   { href: "#about", label: "About", icon: User },
@@ -17,10 +18,12 @@ const navItems = [
 ];
 
 export function Header() {
-  const [isScrolled, setIsScrolled] = React.useState(false);
-  const [openMobileNav, setOpenMobileNav] = React.useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [openMobileNav, setOpenMobileNav] = useState(false);
+  const [hasMounted, setHasMounted] = useState(false);
 
-  React.useEffect(() => {
+  useEffect(() => {
+    setHasMounted(true);
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
     };
@@ -46,6 +49,31 @@ export function Header() {
       ))}
     </>
   );
+
+  if (!hasMounted) {
+    return (
+      <header
+        className={`sticky top-0 z-50 w-full bg-transparent`}
+      >
+        <div className="container mx-auto flex h-20 items-center justify-between px-4 sm:px-6 lg:px-8">
+          <Link href="/" className="text-2xl font-bold font-headline text-primary">
+            {portfolioData.name.split(" ")[0]} <span className="text-foreground/80">{portfolioData.name.split(" ").slice(1).join(" ")}</span>
+          </Link>
+          {/* Desktop Nav Placeholder */}
+          <div className="hidden md:flex items-center space-x-2">
+            {navItems.map((item) => (
+              <div key={item.label} className="h-9 w-20 rounded-md bg-muted/30 animate-pulse" />
+            ))}
+            <div className="h-10 w-10 rounded-full bg-muted/30 animate-pulse" /> {/* ThemeToggle placeholder */}
+          </div>
+          {/* Mobile Nav Trigger Placeholder */}
+          <div className="md:hidden">
+            <div className="h-10 w-10 rounded-md bg-muted/30 animate-pulse" /> {/* Menu icon placeholder */}
+          </div>
+        </div>
+      </header>
+    );
+  }
 
   return (
     <header
