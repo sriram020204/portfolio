@@ -114,9 +114,9 @@ export const portfolioData: PortfolioData = {
       role: "AI/ML Intern",
       dates: "June 2024 – Present",
       description: [
-        "Actively contributing to diverse AI and Machine Learning projects.",
-        "Gaining hands-on experience in developing, implementing, and deploying ML models.",
-        "Collaborating with a team to explore innovative AI solutions."
+        "Currently working on extracting eligibility criteria from tender documents.",
+        "Developing methods to compare extracted tender information with company profiles.",
+        "This is an ongoing project focused on automating and improving the tender bidding process."
       ],
       location: "Hyderabad, Telangana (Remote)"
     }
