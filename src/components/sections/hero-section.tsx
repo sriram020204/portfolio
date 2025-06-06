@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
 import React, { useState, useEffect } from "react";
+import { TypingAnimation } from "@/components/effects/typing-animation";
 
 export function HeroSection() {
   const [hasMounted, setHasMounted] = useState(false);
@@ -53,12 +54,17 @@ export function HeroSection() {
         >
           {portfolioData.name}
         </h1>
-        <p 
-          className="mt-6 text-xl text-foreground/90 sm:text-2xl md:text-3xl animate-fade-in-up"
+        <div 
+          className="mt-6 text-xl text-foreground/90 sm:text-2xl md:text-3xl animate-fade-in-up min-h-[2.5em] sm:min-h-[2.8em] md:min-h-[3em]"
           style={{ animationDelay: '200ms', opacity: 0 }}
         >
-          {portfolioData.role}
-        </p>
+          {hasMounted && (
+            <TypingAnimation 
+              text={portfolioData.role} 
+              className="text-xl text-foreground/90 sm:text-2xl md:text-3xl" 
+            />
+          )}
+        </div>
         <p 
           className="mx-auto mt-8 max-w-3xl text-lg text-muted-foreground sm:text-xl animate-fade-in-up"
           style={{ animationDelay: '300ms', opacity: 0 }}

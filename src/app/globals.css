@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -105,5 +106,19 @@ html {
   }
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: hsl(var(--foreground)); }
+  }
+
+  .blinking-cursor {
+    border-right: 0.15em solid hsl(var(--foreground));
+    animation: blink-caret 1s step-end infinite;
+    padding-left: 2px; /* Optional: to give a bit of space before the cursor */
+    margin-left: 1px; /* Ensure cursor is not overlapping the last char */
   }
 }
