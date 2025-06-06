@@ -9,94 +9,94 @@ html {
 
 @layer base {
   :root {
-    --background: 0 0% 94.1%; /* #F0F0F0 Very Light Gray */
-    --foreground: 248 39% 40%; /* #483D8B Dark Slate Blue */
+    --background: 40 100% 97%; /* Light Creamy Peach */
+    --foreground: 200 95% 25%; /* Deep Cerulean Blue */
     
     --card: 0 0% 100%; /* White */
-    --card-foreground: 248 39% 40%;
+    --card-foreground: 200 95% 25%; /* Deep Cerulean Blue */
     
-    --popover: 0 0% 100%;
-    --popover-foreground: 248 39% 40%;
+    --popover: 0 0% 100%; /* White */
+    --popover-foreground: 200 95% 25%; /* Deep Cerulean Blue */
     
-    --primary: 248 39% 40%; /* #483D8B Dark Slate Blue */
-    --primary-foreground: 240 60% 98%; /* Light Lavender/White */
+    --primary: 340 85% 55%; /* Vibrant Pink/Magenta */
+    --primary-foreground: 0 0% 100%; /* White */
     
-    --secondary: 240 67% 94.1%; /* #E6E6FA Soft Lavender */
-    --secondary-foreground: 248 39% 40%; /* Dark Slate Blue */
+    --secondary: 180 70% 85%; /* Light Aqua/Cyan */
+    --secondary-foreground: 180 90% 20%; /* Dark Cyan */
     
-    --muted: 0 0% 90%;
-    --muted-foreground: 248 30% 50%;
+    --muted: 40 50% 90%; /* Lighter Peachy Muted */
+    --muted-foreground: 200 70% 45%; /* Softer Cerulean Blue */
     
-    --accent: 240 67% 94.1%; /* #E6E6FA Soft Lavender */
-    --accent-foreground: 248 39% 40%; /* Dark Slate Blue */
+    --accent: 50 100% 60%; /* Bright Sunny Yellow/Orange */
+    --accent-foreground: 30 90% 25%; /* Dark Orange/Brown */
     
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
+    --destructive: 0 84.2% 60.2%; /* Default Destructive Red */
+    --destructive-foreground: 0 0% 98%; /* Default Destructive FG */
     
-    --border: 0 0% 89.8%;
-    --input: 0 0% 89.8%;
-    --ring: 248 39% 40%; /* Dark Slate Blue */
+    --border: 40 50% 85%; /* Lighter Peachy Border */
+    --input: 40 50% 85%; /* Lighter Peachy Input */
+    --ring: 340 85% 55%; /* Vibrant Pink/Magenta */
     
-    --chart-1: 12 76% 61%;
-    --chart-2: 173 58% 39%;
-    --chart-3: 197 37% 24%;
-    --chart-4: 43 74% 66%;
-    --chart-5: 27 87% 67%;
+    --chart-1: 12 80% 60%;   /* Fiery Red-Orange */
+    --chart-2: 170 70% 45%;  /* Bright Teal */
+    --chart-3: 210 80% 55%;  /* Bright Blue */
+    --chart-4: 50 100% 55%;  /* Sunny Yellow */
+    --chart-5: 280 80% 60%;  /* Bright Purple */
     --radius: 0.5rem;
 
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-background: 40 100% 98%; /* Very Light Creamy Peach */
+    --sidebar-foreground: 200 80% 20%; /* Dark Cerulean */
+    --sidebar-primary: 340 80% 50%;    /* Slightly less intense Pink/Magenta */
+    --sidebar-primary-foreground: 0 0% 100%; /* White */
+    --sidebar-accent: 180 60% 90%;     /* Lighter Aqua */
+    --sidebar-accent-foreground: 180 80% 15%; /* Darker Aqua */
+    --sidebar-border: 40 50% 90%;      /* Very Light Peachy Border */
+    --sidebar-ring: 340 85% 55%;       /* Vibrant Pink/Magenta */
   }
  
   .dark {
-    --background: 248 20% 12%; /* Dark Desaturated Blue */
-    --foreground: 240 30% 85%; /* Light Grayish Lavender */
+    --background: 220 30% 10%; /* Very Dark Blue/Indigo */
+    --foreground: 40 100% 90%; /* Pale Yellow/Cream */
     
-    --card: 248 20% 18%;
-    --card-foreground: 240 30% 85%;
+    --card: 220 30% 15%; /* Darker Blue/Indigo */
+    --card-foreground: 40 100% 90%; /* Pale Yellow/Cream */
     
-    --popover: 248 20% 12%;
-    --popover-foreground: 240 30% 85%;
+    --popover: 220 30% 10%; /* Very Dark Blue/Indigo */
+    --popover-foreground: 40 100% 90%; /* Pale Yellow/Cream */
     
-    --primary: 240 67% 80%; /* Brighter Soft Lavender */
-    --primary-foreground: 248 39% 20%; /* Darker Slate Blue */
+    --primary: 170 100% 50%; /* Bright Cyan/Turquoise */
+    --primary-foreground: 220 30% 5%; /* Very Dark Blue */
     
-    --secondary: 248 30% 30%; /* Muted Dark Slate Blue */
-    --secondary-foreground: 240 30% 85%;
+    --secondary: 330 90% 60%; /* Vibrant Pink */
+    --secondary-foreground: 40 100% 90%; /* Pale Yellow/Cream */
     
-    --muted: 248 20% 25%;
-    --muted-foreground: 240 20% 65%;
+    --muted: 220 30% 20%; /* Darker Muted Blue */
+    --muted-foreground: 40 80% 75%; /* Softer Pale Yellow */
     
-    --accent: 248 39% 50%; /* Dark Slate Blue (slightly lighter) */
-    --accent-foreground: 240 60% 95%; /* Very Light Lavender/White */
+    --accent: 50 100% 65%; /* Bright Gold/Orange */
+    --accent-foreground: 220 30% 95%; /* Very Light Blue/White */
     
-    --destructive: 0 72.2% 50.6%;
-    --destructive-foreground: 0 0% 98%;
+    --destructive: 0 72.2% 50.6%; /* Default Destructive Red */
+    --destructive-foreground: 0 0% 98%; /* Default Destructive FG */
     
-    --border: 248 20% 28%;
-    --input: 248 20% 28%;
-    --ring: 240 67% 80%; /* Brighter Soft Lavender */
+    --border: 220 30% 25%; /* Slightly Lighter Dark Blue Border */
+    --input: 220 30% 25%; /* Slightly Lighter Dark Blue Input */
+    --ring: 170 100% 50%; /* Bright Cyan/Turquoise */
 
-    --chart-1: 220 70% 50%;
-    --chart-2: 160 60% 45%;
-    --chart-3: 30 80% 55%;
-    --chart-4: 280 65% 60%;
-    --chart-5: 340 75% 55%;
+    --chart-1: 120 100% 50%; /* Neon Green */
+    --chart-2: 330 100% 65%; /* Bright Pink */
+    --chart-3: 200 100% 60%; /* Electric Blue */
+    --chart-4: 55 100% 55%;  /* Vibrant Yellow */
+    --chart-5: 25 100% 60%;   /* Bright Orange */
 
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-background: 220 30% 8%;  /* Even Darker Blue/Indigo */
+    --sidebar-foreground: 40 100% 85%; /* Slightly Dimmer Pale Yellow/Cream */
+    --sidebar-primary: 170 90% 45%;    /* Slightly less intense Bright Cyan */
+    --sidebar-primary-foreground: 220 30% 5%; /* Very Dark Blue */
+    --sidebar-accent: 330 80% 55%;     /* Slightly less intense Vibrant Pink */
+    --sidebar-accent-foreground: 40 100% 90%; /* Pale Yellow/Cream */
+    --sidebar-border: 220 30% 20%;      /* Dark Blue Border */
+    --sidebar-ring: 170 100% 50%;       /* Bright Cyan/Turquoise */
   }
 }
  
