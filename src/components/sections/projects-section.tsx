@@ -18,49 +18,53 @@ interface ProjectCardProps {
 
 function ProjectCard({ project, index }: ProjectCardProps) {
   return (
-    <Card
-      className="flex flex-col overflow-hidden shadow-lg transition-all duration-300 ease-in-out hover:shadow-xl hover:scale-[1.07] hover:-translate-y-1 animate-fade-in-up"
-      style={{ opacity: 0, animationDelay: `${400 + index * 100}ms` }}
+    <div
+      className="animate-fade-in-up h-full"
+      style={{ opacity: 0, animationDelay: `${300 + index * 100}ms` }}
     >
-      <CardHeader className="pb-4">
-        <CardTitle className="text-xl font-semibold font-headline text-primary">{project.title}</CardTitle>
-      </CardHeader>
-      <CardContent className="flex-grow space-y-3">
-        {project.description.map((desc, idx) => (
-          <p key={idx} className="text-base text-foreground/90 leading-relaxed">
-            {desc}
-          </p>
-        ))}
-        <div className="pt-2">
-          <h4 className="text-sm font-medium text-muted-foreground mb-2">Tech Stack:</h4>
-          <div className="flex flex-wrap gap-2">
-            {project.techStack.map((tech) => (
-              <Badge key={tech} variant="outline" className="text-xs">
-                {tech}
-              </Badge>
-            ))}
+      <Card
+        className="flex flex-col overflow-hidden shadow-lg transition-all duration-300 ease-in-out hover:shadow-xl hover:scale-[1.07] hover:-translate-y-1 h-full"
+      >
+        <CardHeader className="pb-4">
+          <CardTitle className="text-xl font-semibold font-headline text-primary">{project.title}</CardTitle>
+        </CardHeader>
+        <CardContent className="flex-grow space-y-3">
+          {project.description.map((desc, idx) => (
+            <p key={idx} className="text-base text-foreground/90 leading-relaxed">
+              {desc}
+            </p>
+          ))}
+          <div className="pt-2">
+            <h4 className="text-sm font-medium text-muted-foreground mb-2">Tech Stack:</h4>
+            <div className="flex flex-wrap gap-2">
+              {project.techStack.map((tech) => (
+                <Badge key={tech} variant="outline" className="text-xs">
+                  {tech}
+                </Badge>
+              ))}
+            </div>
           </div>
-        </div>
-      </CardContent>
-      <CardFooter className="pt-4 flex-wrap gap-2">
-        <div className="flex w-full items-center justify-start space-x-3">
-          {project.githubLink && (
-            <Button variant="outline" size="sm" asChild>
-              <Link href={project.githubLink} target="_blank" rel="noopener noreferrer">
-                <Github className="mr-2 h-4 w-4" /> GitHub
-              </Link>
-            </Button>
-          )}
-          {project.liveLink && (
-              <Button variant="default" size="sm" asChild>
-                <Link href={project.liveLink} target="_blank" rel="noopener noreferrer">
-                  <ExternalLink className="mr-2 h-4 w-4" /> Live Demo
+        </CardContent>
+        <CardFooter className="pt-4 flex-wrap gap-2">
+          <div className="flex w-full items-center justify-start space-x-3">
+            {project.githubLink && (
+              <Button variant="outline" size="sm" asChild>
+                <Link href={project.githubLink} target="_blank" rel="noopener noreferrer">
+                  <Github className="mr-2 h-4 w-4" /> GitHub
                 </Link>
               </Button>
-          )}
-        </div>
-      </CardFooter>
-    </Card>
+            )}
+            {project.liveLink && (
+                <Button variant="default" size="sm" asChild>
+                  <Link href={project.liveLink} target="_blank" rel="noopener noreferrer">
+                    <ExternalLink className="mr-2 h-4 w-4" /> Live Demo
+                  </Link>
+                </Button>
+            )}
+          </div>
+        </CardFooter>
+      </Card>
+    </div>
   );
 }
 
@@ -93,4 +97,3 @@ export function ProjectsSection() {
     </section>
   );
 }
-
