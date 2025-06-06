@@ -58,7 +58,7 @@ export const portfolioData: PortfolioData = {
     { category: "Machine Learning", skills: ["Deep Learning", "Neural Networks", "Image Processing", "Natural Language Processing (NLP)"] },
     { category: "Data Science & Analytics", skills: ["Data Pre-processing", "Feature Engineering", "Exploratory Data Analysis (EDA)", "Statistical Analysis", "Predictive Modeling"] },
     { category: "Developer Tools", skills: ["Git", "GitHub"] },
-    { category: "Libraries & Frameworks", skills: ["Pandas", "NumPy", "Scikit-Learn", "TensorFlow", "Keras", "NLTK", "Matplotlib", "Seaborn", "imbalanced-learn", "PyTorch"] }
+    { category: "Libraries & Frameworks", skills: ["Pandas", "NumPy", "Scikit-Learn", "TensorFlow", "Keras", "NLTK", "Matplotlib", "Seaborn", "PyTorch"] }
   ],
   projects: [
     {
@@ -95,7 +95,7 @@ export const portfolioData: PortfolioData = {
         "Full pipeline: Data cleaning, feature extraction, modeling, and evaluation.",
         "Achieved high accuracy and recall with balanced dataset."
       ],
-      techStack: ["Python", "Scikit-Learn", "NLTK", "Pandas", "Matplotlib", "imbalanced-learn"],
+      techStack: ["Python", "Scikit-Learn", "NLTK", "Pandas", "Matplotlib"],
       githubLink: "https://github.com/sriram020204",
     }
   ],
@@ -108,3 +108,4 @@ export const portfolioData: PortfolioData = {
     }
   ]
 };
+
