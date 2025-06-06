@@ -34,6 +34,7 @@ export interface ContactInfo {
   phone: string;
   linkedin: string;
   github: string;
+  kaggle?: string;
 }
 
 export interface PortfolioData {
@@ -56,6 +57,7 @@ export const portfolioData: PortfolioData = {
     phone: "+91 8790567522",
     linkedin: "https://www.linkedin.com/in/sriram-kumar-reddy-ginjala/",
     github: "https://github.com/sriram020204",
+    kaggle: "https://www.kaggle.com/yourusername", // Replace with your actual Kaggle username
   },
   heroTagline: "Passionate about machine learning and dedicated to advancing technology through impactful projects.",
   aboutMe: [
