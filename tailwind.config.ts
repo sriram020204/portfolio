@@ -72,9 +72,9 @@ export default {
           border: 'hsl(var(--sidebar-border))',
           ring: 'hsl(var(--sidebar-ring))',
         },
-        'custom-silver': '#C0C0C0',
-        'custom-blue-steel': '#4682B4',
-        'custom-violet': '#8A2BE2',
+        'custom-deep-indigo': '#4B0082',
+        'custom-teal': '#008080',
+        'custom-silver-mist': '#E0E0E0',
       },
       borderRadius: {
         lg: 'var(--radius)',

@@ -74,7 +74,7 @@ export function ContactSection() {
             className="font-headline text-4xl font-bold sm:text-5xl animate-fade-in-up"
             style={{ opacity: 0, animationDelay: '100ms' }}
           >
-            <span className="bg-gradient-to-r from-custom-silver via-custom-blue-steel to-custom-violet bg-clip-text text-transparent animate-text-gradient-flow bg-[size:200%_auto]">
+            <span className="bg-gradient-to-r from-custom-deep-indigo via-custom-teal to-custom-silver-mist bg-clip-text text-transparent animate-text-gradient-flow bg-[size:200%_auto]">
               Get In Touch
             </span>
           </h2>

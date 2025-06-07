@@ -71,7 +71,7 @@ export function HeroSection() {
           className="font-headline text-5xl font-bold tracking-tight sm:text-6xl md:text-7xl animate-fade-in-up"
           style={{ animationDelay: '100ms', opacity: 0 }}
         >
-          <span className="bg-gradient-to-r from-custom-silver via-custom-blue-steel to-custom-violet bg-clip-text text-transparent animate-text-gradient-flow bg-[size:200%_auto]">
+          <span className="bg-gradient-to-r from-custom-deep-indigo via-custom-teal to-custom-silver-mist bg-clip-text text-transparent animate-text-gradient-flow bg-[size:200%_auto]">
             {firstName} {lastName}
           </span>
         </h1>
