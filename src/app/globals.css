@@ -54,9 +54,9 @@ html {
     --sidebar-ring: 48 96% 55%;
 
     /* Custom switch colors for unchecked state */
-    --switch-track-unchecked: hsl(0, 0%, 25%); /* Dark grey for track when unchecked */
-    --switch-thumb-unchecked: hsl(0, 0%, 50%); /* Medium grey for thumb when unchecked */
-    --switch-track-border-unchecked: hsl(0, 0%, 35%); /* Slightly lighter dark grey for track border */
+    --switch-track-unchecked: hsl(0 0% 96%); /* Very light gray (like background) */
+    --switch-thumb-unchecked: hsl(0 0% 40%); /* Darker grey for thumb */
+    --switch-track-border-unchecked: hsl(0 0% 60%); /* Medium grey for track border */
   }
  
   .dark {
