@@ -52,11 +52,6 @@ html {
     --sidebar-accent-foreground: 248 39% 21%; 
     --sidebar-border: 220 15% 85%;      
     --sidebar-ring: 48 96% 55%;
-
-    /* Custom switch colors for unchecked state */
-    --switch-track-unchecked: hsl(0 0% 85%); /* More visible light grey for track */
-    --switch-thumb-unchecked: hsl(0 0% 40%); /* Dark grey for thumb */
-    --switch-track-border-unchecked: hsl(0 0% 75%); /* Darker grey for track border */
   }
  
   .dark {
