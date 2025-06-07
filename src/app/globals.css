@@ -55,7 +55,7 @@ html {
 
     /* Custom switch colors for unchecked state */
     --switch-track-unchecked: hsl(0 0% 85%); /* More visible light grey for track */
-    --switch-thumb-unchecked: hsl(0 0% 70%); /* Lighter grey for thumb */
+    --switch-thumb-unchecked: hsl(0 0% 40%); /* Dark grey for thumb */
     --switch-track-border-unchecked: hsl(0 0% 75%); /* Darker grey for track border */
   }
  
