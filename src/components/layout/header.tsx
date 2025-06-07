@@ -51,15 +51,27 @@ export function Header() {
     </>
   );
 
+  const nameParts = portfolioData.name.split(" ");
+  const firstWord = nameParts[0];
+  const restOfName = nameParts.slice(1).join(" ");
+
   if (!hasMounted) {
+    // Simplified placeholder for the name
+    const placeholderName = (
+      <div className="flex items-center">
+        <div className="h-6 w-20 animate-pulse rounded-md bg-primary/30"></div>
+        <div className="ml-1 h-6 w-32 animate-pulse rounded-md bg-muted/30"></div>
+      </div>
+    );
+
     return (
       <header
         className={`sticky top-0 z-50 w-full bg-transparent`}
       >
         <div className="container mx-auto flex h-20 items-center justify-between px-4 sm:px-6 lg:px-8">
-          <Link href="/" className="text-xl font-bold font-headline text-primary">
-            {portfolioData.name}
-          </Link>
+          <div className="text-xl font-bold font-headline">
+            {placeholderName}
+          </div>
           <div className="hidden md:flex items-center space-x-2">
             {navItems.map((item) => (
               <div key={item.label} className="h-9 w-20 rounded-md bg-muted/30 animate-pulse" />
@@ -81,8 +93,9 @@ export function Header() {
       }`}
     >
       <div className="container mx-auto flex h-20 items-center justify-between px-4 sm:px-6 lg:px-8">
-        <Link href="/" className="text-xl font-bold font-headline text-primary">
-          {portfolioData.name}
+        <Link href="/" className="text-xl font-bold font-headline">
+          <span className="text-primary">{firstWord}</span>
+          <span className="text-foreground"> {restOfName}</span>
         </Link>
         
         <nav className="hidden items-center space-x-2 md:flex">
@@ -99,7 +112,10 @@ export function Header() {
               </Button>
             </SheetTrigger>
             <SheetContent side="right" className="w-[280px] p-6">
-              <div className="mb-6 text-xl font-bold font-headline text-primary">Menu</div>
+              <div className="mb-6 text-xl font-bold font-headline">
+                <span className="text-primary">{firstWord}</span>
+                <span className="text-foreground"> {restOfName}</span>
+              </div>
               <nav className="flex flex-col space-y-3">
                 <NavLinks inSheet />
                 <div className="pt-4">
