@@ -9,94 +9,98 @@ html {
 
 @layer base {
   :root {
-    --background: 200 20% 96%; /* Very Light Cool Gray/Off-White with a hint of cyan */
-    --foreground: 215 25% 15%; /* Very Dark Desaturated Blue */
+    --background: 0 0% 96%; /* Very light gray for Portfolio Pro */
+    --foreground: 248 39% 11%; /* Very dark slate blue for Portfolio Pro */
     
     --card: 0 0% 100%; /* White */
-    --card-foreground: 215 25% 15%; /* Very Dark Desaturated Blue */
+    --card-foreground: 248 39% 11%; /* Very dark slate blue */
     
     --popover: 0 0% 100%; /* White */
-    --popover-foreground: 215 25% 15%; /* Very Dark Desaturated Blue */
+    --popover-foreground: 248 39% 11%; /* Very dark slate blue */
     
-    --primary: 180 65% 40%; /* Deep Teal */
-    --primary-foreground: 180 20% 95%; /* Very Light Teal/White */
+    --primary: 248 39% 41%; /* Dark slate blue (#483D8B) for Portfolio Pro */
+    --primary-foreground: 240 67% 97%; /* Very light lavender/white for contrast on dark slate blue */
     
-    --secondary: 210 60% 85%; /* Soft Light Blue */
-    --secondary-foreground: 210 70% 25%; /* Darker Blue for contrast */
+    --secondary: 240 60% 85%; /* Soft Light Blue - Kept from previous, can be adjusted if PRD has a specific secondary */
+    --secondary-foreground: 240 70% 25%; /* Darker Blue for contrast on soft light blue */
     
-    --muted: 210 20% 92%; /* Light Grayish Blue */
-    --muted-foreground: 210 15% 40%; /* Medium Grayish Blue */
+    --muted: 220 20% 92%; /* Light Grayish Blue - kept for subtle elements */
+    --muted-foreground: 220 15% 40%; /* Medium Grayish Blue */
     
-    --accent: 30 90% 55%; /* Vibrant Orange */
-    --accent-foreground: 30 90% 5%; /* Very Dark Brown for contrast on orange */
+    --accent: 240 67% 94%; /* Soft lavender (#E6E6FA) for Portfolio Pro */
+    --accent-foreground: 248 39% 21%; /* Darker slate blue for contrast on soft lavender */
     
     --destructive: 0 75% 55%; /* Standard Red (slightly softer) */
     --destructive-foreground: 0 0% 98%; /* Almost White */
     
-    --border: 210 15% 85%; /* Light Grayish Blue Border */
-    --input: 210 15% 85%; /* Light Grayish Blue Input */
-    --ring: 180 60% 45%; /* Slightly brighter Teal for ring */
+    --border: 220 15% 85%; /* Light Grayish Blue Border */
+    --input: 220 15% 85%; /* Light Grayish Blue Input */
+    --ring: 248 39% 51%; /* Slightly brighter Dark Slate Blue for ring */
     
-    --chart-1: 180 65% 40%;   /* Primary Teal */
-    --chart-2: 30 90% 55%;  /* Accent Orange */
+    --chart-1: 248 39% 41%;   /* Primary Dark Slate Blue */
+    --chart-2: 240 67% 80%;  /* Lighter Soft Lavender for Accent Chart */
     --chart-3: 220 70% 60%;   /* Medium Blue */
     --chart-4: 150 50% 50%;   /* Seafoam Green */
     --chart-5: 280 50% 60%;   /* Purple */
     --radius: 0.5rem;
 
-    --sidebar-background: 200 20% 95%; 
-    --sidebar-foreground: 215 25% 15%; 
-    --sidebar-primary: 180 65% 40%;    
-    --sidebar-primary-foreground: 180 20% 95%; 
-    --sidebar-accent: 30 90% 55%;     
-    --sidebar-accent-foreground: 30 90% 5%; 
-    --sidebar-border: 210 15% 85%;      
-    --sidebar-ring: 180 60% 45%;       
+    --sidebar-background: 0 0% 95%; 
+    --sidebar-foreground: 248 39% 11%; 
+    --sidebar-primary: 248 39% 41%;    
+    --sidebar-primary-foreground: 240 67% 97%; 
+    --sidebar-accent: 240 67% 94%;     
+    --sidebar-accent-foreground: 248 39% 21%; 
+    --sidebar-border: 220 15% 85%;      
+    --sidebar-ring: 248 39% 51%;
+
+    /* Custom switch colors for unchecked state */
+    --switch-track-unchecked: hsl(0, 0%, 25%); /* Dark grey for track when unchecked */
+    --switch-thumb-unchecked: hsl(0, 0%, 50%); /* Medium grey for thumb when unchecked */
   }
  
   .dark {
-    --background: 215 28% 12%; /* Very Dark Desaturated Blue */
-    --foreground: 200 15% 88%; /* Light Cool Gray with hint of cyan */
+    --background: 248 39% 11%; /* Very dark slate blue for Portfolio Pro */
+    --foreground: 0 0% 90%; /* Light gray for Portfolio Pro */
     
-    --card: 215 25% 17%; /* Slightly Lighter Dark Desaturated Blue */
-    --card-foreground: 200 15% 88%;
+    --card: 248 39% 16%; /* Slightly Lighter Dark Slate Blue */
+    --card-foreground: 0 0% 90%;
     
-    --popover: 215 25% 17%;
-    --popover-foreground: 200 15% 88%;
+    --popover: 248 39% 16%;
+    --popover-foreground: 0 0% 90%;
     
-    --primary: 175 70% 55%; /* Brighter Teal */
-    --primary-foreground: 175 15% 10%; /* Very Dark Teal for contrast */
+    --primary: 248 39% 51%; /* Brighter Dark Slate Blue for Dark Mode */
+    --primary-foreground: 0 0% 95%; /* Lighter gray for contrast */
     
-    --secondary: 210 30% 25%; /* Darker Muted Blue */
-    --secondary-foreground: 210 30% 75%; /* Lighter Muted Blue */
+    --secondary: 240 30% 25%; /* Darker Muted Blue */
+    --secondary-foreground: 240 30% 75%; /* Lighter Muted Blue */
     
-    --muted: 210 25% 20%; /* Dark Grayish Blue */
-    --muted-foreground: 210 15% 55%; /* Medium-Light Grayish Blue */
+    --muted: 220 25% 20%; /* Dark Grayish Blue */
+    --muted-foreground: 220 15% 55%; /* Medium-Light Grayish Blue */
     
-    --accent: 35 95% 60%; /* Brighter Orange */
-    --accent-foreground: 35 90% 5%; /* Very Dark Brown for contrast on orange */
+    --accent: 240 67% 80%; /* Brighter Soft Lavender for Dark Mode */
+    --accent-foreground: 248 39% 90%; /* Light slate blue/gray for contrast */
     
     --destructive: 0 65% 50%; /* Slightly softer Red for dark mode */
     --destructive-foreground: 0 0% 98%;
     
-    --border: 210 15% 30%; /* Dark Grayish Blue Border */
-    --input: 210 15% 30%;
-    --ring: 175 70% 60%; /* Brighter Teal for ring */
+    --border: 220 15% 30%; /* Dark Grayish Blue Border */
+    --input: 220 15% 30%;
+    --ring: 248 39% 61%; /* Brighter Dark Slate Blue for ring */
 
-    --chart-1: 175 70% 55%;   /* Primary Teal - Dark Mode */
-    --chart-2: 35 95% 60%;  /* Accent Orange - Dark Mode */
+    --chart-1: 248 39% 51%;   /* Primary Dark Slate Blue - Dark Mode */
+    --chart-2: 240 67% 70%;  /* Lighter Soft Lavender - Dark Mode */
     --chart-3: 220 75% 70%;   /* Lighter Medium Blue - Dark Mode */
     --chart-4: 150 55% 60%;   /* Lighter Seafoam - Dark Mode */
     --chart-5: 280 55% 70%;   /* Lighter Purple - Dark Mode */
 
-    --sidebar-background: 215 28% 12%;  
-    --sidebar-foreground: 200 15% 88%; 
-    --sidebar-primary: 175 70% 55%;    
-    --sidebar-primary-foreground: 175 15% 10%; 
-    --sidebar-accent: 35 95% 60%;     
-    --sidebar-accent-foreground: 35 90% 5%; 
-    --sidebar-border: 210 15% 30%;      
-    --sidebar-ring: 175 70% 60%;       
+    --sidebar-background: 248 39% 11%;  
+    --sidebar-foreground: 0 0% 90%; 
+    --sidebar-primary: 248 39% 51%;    
+    --sidebar-primary-foreground: 0 0% 95%; 
+    --sidebar-accent: 240 67% 80%;     
+    --sidebar-accent-foreground: 248 39% 90%; 
+    --sidebar-border: 220 15% 30%;      
+    --sidebar-ring: 248 39% 61%;       
   }
 }
  
