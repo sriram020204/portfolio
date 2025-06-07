@@ -58,7 +58,7 @@ export function Header() {
       >
         <div className="container mx-auto flex h-20 items-center justify-between px-4 sm:px-6 lg:px-8">
           <Link href="/" className="text-2xl font-bold font-headline text-primary">
-            G
+            {portfolioData.name.charAt(0)}
           </Link>
           <div className="hidden md:flex items-center space-x-2">
             {navItems.map((item) => (
@@ -82,7 +82,7 @@ export function Header() {
     >
       <div className="container mx-auto flex h-20 items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link href="/" className="text-2xl font-bold font-headline text-primary">
-          G
+          {portfolioData.name.charAt(0)}
         </Link>
         
         <nav className="hidden items-center space-x-2 md:flex">
