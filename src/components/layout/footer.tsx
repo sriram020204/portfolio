@@ -12,7 +12,10 @@ export function Footer() {
   }, []);
 
   return (
-    <footer className="border-t py-8 text-center text-sm text-muted-foreground">
+    <footer
+      className="border-t py-8 text-center text-sm text-muted-foreground animate-fade-in-up"
+      style={{ opacity: 0, animationDelay: '100ms' }}
+    >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <p className="flex items-center justify-center">
           &copy; {currentYear || new Date().getFullYear()} {portfolioData.name}. All rights reserved.
@@ -21,4 +24,3 @@ export function Footer() {
     </footer>
   );
 }
-
