@@ -16,7 +16,7 @@ const KaggleIcon = (props: React.SVGProps<SVGSVGElement>) => (
     {...props}
   >
     <title>Kaggle</title>
-    <path d="M15.334 16.958L12 13.623l-3.334 3.335L4.92 20.704h14.16L15.334 16.96zm.666-3.334L12 10.29l-3.975 3.975L3.21 19.128V4.872l4.815 4.815L12 5.712l3.975 3.975 4.815-4.815v14.256z" />
+    <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-size="18px" font-family="system-ui, sans-serif" font-weight="bold" fill="currentColor">k</text>
   </svg>
 );
 
