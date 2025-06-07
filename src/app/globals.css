@@ -18,8 +18,8 @@ html {
     --popover: 0 0% 100%; /* White */
     --popover-foreground: 248 39% 11%; /* Very dark slate blue */
     
-    --primary: 248 39% 41%; /* Dark slate blue (#483D8B) for Portfolio Pro */
-    --primary-foreground: 240 67% 97%; /* Very light lavender/white for contrast on dark slate blue */
+    --primary: 48 96% 50%; /* Vibrant Yellow */
+    --primary-foreground: 48 90% 15%; /* Dark Brownish Yellow for contrast */
     
     --secondary: 240 60% 85%; /* Soft Light Blue - Kept from previous, can be adjusted if PRD has a specific secondary */
     --secondary-foreground: 240 70% 25%; /* Darker Blue for contrast on soft light blue */
@@ -35,9 +35,9 @@ html {
     
     --border: 220 15% 85%; /* Light Grayish Blue Border */
     --input: 220 15% 85%; /* Light Grayish Blue Input */
-    --ring: 248 39% 51%; /* Slightly brighter Dark Slate Blue for ring */
+    --ring: 48 96% 55%; /* Slightly Lighter Yellow for ring */
     
-    --chart-1: 248 39% 41%;   /* Primary Dark Slate Blue */
+    --chart-1: 48 96% 50%;   /* Primary Yellow */
     --chart-2: 240 67% 80%;  /* Lighter Soft Lavender for Accent Chart */
     --chart-3: 220 70% 60%;   /* Medium Blue */
     --chart-4: 150 50% 50%;   /* Seafoam Green */
@@ -46,12 +46,12 @@ html {
 
     --sidebar-background: 0 0% 95%; 
     --sidebar-foreground: 248 39% 11%; 
-    --sidebar-primary: 248 39% 41%;    
-    --sidebar-primary-foreground: 240 67% 97%; 
+    --sidebar-primary: 48 96% 50%;    
+    --sidebar-primary-foreground: 48 90% 15%; 
     --sidebar-accent: 240 67% 94%;     
     --sidebar-accent-foreground: 248 39% 21%; 
     --sidebar-border: 220 15% 85%;      
-    --sidebar-ring: 248 39% 51%;
+    --sidebar-ring: 48 96% 55%;
 
     /* Custom switch colors for unchecked state */
     --switch-track-unchecked: hsl(0, 0%, 25%); /* Dark grey for track when unchecked */
@@ -69,8 +69,8 @@ html {
     --popover: 248 39% 16%;
     --popover-foreground: 0 0% 90%;
     
-    --primary: 248 39% 51%; /* Brighter Dark Slate Blue for Dark Mode */
-    --primary-foreground: 0 0% 95%; /* Lighter gray for contrast */
+    --primary: 48 96% 55%; /* Brighter/Lighter Yellow for Dark Mode */
+    --primary-foreground: 48 90% 15%; /* Dark Brownish Yellow for contrast */
     
     --secondary: 240 30% 25%; /* Darker Muted Blue */
     --secondary-foreground: 240 30% 75%; /* Lighter Muted Blue */
@@ -86,9 +86,9 @@ html {
     
     --border: 220 15% 30%; /* Dark Grayish Blue Border */
     --input: 220 15% 30%;
-    --ring: 248 39% 61%; /* Brighter Dark Slate Blue for ring */
+    --ring: 48 96% 60%; /* Brighter Yellow for ring */
 
-    --chart-1: 248 39% 51%;   /* Primary Dark Slate Blue - Dark Mode */
+    --chart-1: 48 96% 55%;   /* Primary Yellow - Dark Mode */
     --chart-2: 240 67% 70%;  /* Lighter Soft Lavender - Dark Mode */
     --chart-3: 220 75% 70%;   /* Lighter Medium Blue - Dark Mode */
     --chart-4: 150 55% 60%;   /* Lighter Seafoam - Dark Mode */
@@ -96,12 +96,12 @@ html {
 
     --sidebar-background: 248 39% 11%;  
     --sidebar-foreground: 0 0% 90%; 
-    --sidebar-primary: 248 39% 51%;    
-    --sidebar-primary-foreground: 0 0% 95%; 
+    --sidebar-primary: 48 96% 55%;    
+    --sidebar-primary-foreground: 48 90% 15%; 
     --sidebar-accent: 240 67% 80%;     
     --sidebar-accent-foreground: 248 39% 90%; 
     --sidebar-border: 220 15% 30%;      
-    --sidebar-ring: 248 39% 61%;       
+    --sidebar-ring: 48 96% 60%;       
   }
 }
  
