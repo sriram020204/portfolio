@@ -109,20 +109,6 @@ html {
     @apply bg-background text-foreground;
     font-family: 'Inter', sans-serif;
   }
-
-  .dark body {
-    /* Apply sweep animation when dark mode is activated */
-    animation: body-clip-path-reveal-dark 0.6s ease-out forwards;
-  }
-}
-
-@keyframes body-clip-path-reveal-dark {
-  0% {
-    clip-path: polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%); /* Collapsed at top-left corner */
-  }
-  100% {
-    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%); /* Fully visible */
-  }
 }
 
 @layer utilities {
@@ -154,4 +140,3 @@ html {
     animation: text-gradient-flow 4s ease infinite;
   }
 }
-
